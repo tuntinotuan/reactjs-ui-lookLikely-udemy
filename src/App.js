@@ -9,34 +9,21 @@ import SwiperNavButtons from "./components/button/SwiperNavButtons";
 import Main from "./components/layout/Main";
 import Header from "./components/layout/Header";
 import Banner from "./components/banner/Banner";
+import CoursesSelection from "./components/layout/CoursesSelection";
+import GoalsAchieving from "./components/layout/GoalsAchieving";
+import ViewingStudents from "./components/layout/ViewingStudents";
+import TopCategories from "./components/layout/TopCategories";
+import FeaturedTopics from "./components/layout/FeaturedTopics";
 function App() {
   return (
     <Fragment>
       <Header></Header>
       <Banner></Banner>
-      <div className="page-container">
-        <Swiper
-          cssMode={true}
-          // navigation={true}
-          // pagination={true}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
-          autoplay={true}
-          className="mySwiper"
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-          {/* <SwiperNavButtons></SwiperNavButtons> */}
-        </Swiper>
-      </div>
+      <CoursesSelection></CoursesSelection>
+      <GoalsAchieving></GoalsAchieving>
+      <ViewingStudents></ViewingStudents>
+      <TopCategories></TopCategories>
+      <FeaturedTopics></FeaturedTopics>
     </Fragment>
   );
 }

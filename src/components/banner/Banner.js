@@ -10,7 +10,8 @@ const Banner = () => {
   return (
     <section className="banner h-[400px] max-w-[1360px] mx-auto mb-20">
       <Swiper
-        // cssMode={true}
+        // slidesPerView={2}
+        cssMode={true}
         grabCursor="true"
         slidesPerView={"auto"}
         // mousewheel={true}
@@ -45,11 +46,11 @@ function BannerItem({ image = "" }) {
         className="w-full h-full object-cover"
       />
       <div className="absolute top-[70px] left-[70px] w-[450px] bg-white p-5 shadow-md">
-        <div className="flex flex-col gap-x-3 mb-8">
-          <h1 className="text-4xl font-bold">
+        <div className="flex flex-col gap-x-3">
+          <h1 className="text-4xl font-bold mb-4">
             Unlock the power of your people
           </h1>
-          <p className="text-sm">
+          <p className="text-[16px]">
             Udemy Business is trusted by 12.5K+ companies around the world.
             <a href="#" className="underline text-blue-800">
               Find out what we can do for yours.
