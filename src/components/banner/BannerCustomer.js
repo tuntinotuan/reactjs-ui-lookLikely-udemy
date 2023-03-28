@@ -33,6 +33,8 @@ const BannerCustomer = () => {
         <SwiperNavButtons
           positionLeftBtn="bottom-[70px]"
           positionRightBtn="bottom-[70px]"
+          // sizeButton="w-12 h-12"
+          // positionLeftBtn="left-[-10px] bottom-[20px]"
         ></SwiperNavButtons>
       </Swiper>
     </section>

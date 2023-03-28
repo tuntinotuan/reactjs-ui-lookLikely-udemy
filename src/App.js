@@ -1,13 +1,8 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
 import { Fragment, lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import "swiper/scss";
-import Banner from "./components/banner/Banner";
-import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import SwiperNavButtons from "./components/button/SwiperNavButtons";
 import Main from "./components/layout/Main";
 import PageNotFound from "./components/layout/PageNotFound";
 const HomePage = lazy(() => import("./pages/HomePage"));
