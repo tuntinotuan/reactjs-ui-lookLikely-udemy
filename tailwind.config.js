@@ -12,6 +12,7 @@ module.exports = {
         textstart: "#B4690E",
         star: "#E59819",
         btnsell: "#ECEB98",
+        darkudemy: "#1C1D1F",
       },
     },
   },

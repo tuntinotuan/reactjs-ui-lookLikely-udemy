@@ -1,5 +1,5 @@
 import React from "react";
-import { data, dataTopCategories } from "../../data/dataConfig";
+import { dataTopCategories } from "../../data/dataConfig";
 import TopCard from "../course/TopCard";
 
 const TopCategories = () => {

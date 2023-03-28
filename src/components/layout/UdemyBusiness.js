@@ -16,7 +16,7 @@ const UdemyBusiness = () => {
           </h1>
           <div className="flex items-center gap-5 mb-2">
             <div className="ml-2">
-              <div className="w-2 h-2 bg-slate-900 rounded-full"></div>
+              <div className="w-2 h-2 bg-darkudemy rounded-full"></div>
             </div>
             <p className="text-lg">
               Unlimited access to 19,000+ top Udemy courses, anytime, anywhere
@@ -24,7 +24,7 @@ const UdemyBusiness = () => {
           </div>
           <div className="flex items-center gap-5 mb-2">
             <div className="ml-2">
-              <div className="w-2 h-2 bg-slate-900 rounded-full"></div>
+              <div className="w-2 h-2 bg-darkudemy rounded-full"></div>
             </div>
             <p className="text-lg">
               International course collection in 14 languages
@@ -32,11 +32,11 @@ const UdemyBusiness = () => {
           </div>
           <div className="flex items-center gap-5 mb-2">
             <div className="ml-2">
-              <div className="w-2 h-2 bg-slate-900 rounded-full"></div>
+              <div className="w-2 h-2 bg-darkudemy rounded-full"></div>
             </div>
             <p className="text-lg">Top certifications in tech and business</p>
           </div>
-          <Button className="bg-slate-900 font-bold text-white mt-5" borderNone>
+          <Button className="bg-darkudemy font-bold text-white mt-5" borderNone>
             Get Udemy Business
           </Button>
           <Button className="ml-2 font-bold">Learn more</Button>
@@ -56,7 +56,7 @@ const UdemyBusiness = () => {
             Instructors from around the world teach millions of students on
             Udemy. We provide the tools and skills to teach what you love.
           </p>
-          <Button className="bg-slate-900 font-bold text-white mt-5" borderNone>
+          <Button className="bg-darkudemy font-bold text-white mt-5" borderNone>
             Start teaching today
           </Button>
         </div>

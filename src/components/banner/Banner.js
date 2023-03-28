@@ -21,7 +21,11 @@ const Banner = () => {
         // className="mySwiper"
       >
         <SwiperSlide>
-          <BannerItem image="https://img-b.udemycdn.com/notices/home_carousel_slide/image/7c10f728-ee9c-4cf1-8235-15a8a56092ed.jpg"></BannerItem>
+          <BannerItem
+            image="https://img-b.udemycdn.com/notices/home_carousel_slide/image/7c10f728-ee9c-4cf1-8235-15a8a56092ed.jpg"
+            title="Learning that lasts"
+            content="Invest in yourself. Log in now for special savings on courses. Sale ends March 30."
+          ></BannerItem>
         </SwiperSlide>
         <SwiperSlide>
           <BannerItem></BannerItem>
@@ -34,7 +38,11 @@ const Banner = () => {
     </section>
   );
 };
-function BannerItem({ image = "" }) {
+function BannerItem({
+  image = "",
+  title = "Unlock the power of your people",
+  content = "Udemy Business is trusted by 12.5K+ companies around the world.",
+}) {
   // const navigate = useNavigate();
   return (
     <div className="w-full h-full relative">
@@ -50,11 +58,9 @@ function BannerItem({ image = "" }) {
       />
       <div className="absolute top-[70px] left-[70px] w-[450px] bg-white p-5 shadow-md">
         <div className="flex flex-col gap-x-3">
-          <h1 className="text-4xl font-bold mb-4">
-            Unlock the power of your people
-          </h1>
+          <h1 className="text-4xl font-bold mb-4">{title}</h1>
           <p className="text-[16px]">
-            Udemy Business is trusted by 12.5K+ companies around the world.
+            {content}
             <a href="#" className="underline text-blue-800">
               Find out what we can do for yours.
             </a>

@@ -15,7 +15,7 @@ const SwiperNavButtons = ({
           positionLeftBtn ? positionLeftBtn : "top-[180px]"
         }  ${
           sizeButton ? sizeButton : "w-10 h-10"
-        } bg-black rounded-full shadow-md hover:bg-slate-700 transition-all`}
+        } bg-black rounded-full shadow-2xl hover:bg-slate-700 transition-all`}
         style={{ zIndex: 1 }}
       >
         <svg

@@ -5,9 +5,8 @@ import SwiperNavButtons from "../button/SwiperNavButtons";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { data } from "../../data/dataConfig";
 
-const ListCourse = () => {
+const ListCourse = ({ data }) => {
   return (
     <div className="relative course-list">
       <Swiper

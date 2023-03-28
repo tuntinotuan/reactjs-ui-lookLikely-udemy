@@ -14,7 +14,7 @@ const FeaturedTopics = () => {
                 <h2 className="text-xl font-bold mb-5">{items.topic}</h2>
                 {items.ul_topic.map((ulItems) => (
                   <ul className="mb-5">
-                    <li className="text-[16px] font-bold underline text-purple-700 mb-1 cursor-pointer">
+                    <li className="text-[16px] font-bold underline text-purple-700 hover:text-purple-800 mb-1 cursor-pointer">
                       {ulItems.title_topic}
                     </li>
                     <p className="opacity-50">{ulItems.totalStudents_topic}</p>

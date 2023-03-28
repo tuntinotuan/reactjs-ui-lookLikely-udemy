@@ -3,33 +3,45 @@ import Button from "../button/Button";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-between bg-slate-900 w-full px-12 py-8 text-white">
+    <footer className="flex flex-col justify-between bg-darkudemy w-full px-12 py-8 text-white">
       <div className="mb-10 flex justify-between items-start">
         <div className="grid grid-cols-3 gap-32">
           <ul>
-            <li className="mb-2">Udemy Business</li>
-            <li className="mb-2">Teach on Udemy</li>
-            <li className="mb-2">Get the app</li>
-            <li className="mb-2">About us</li>
-            <li className="mb-2">Contact us</li>
+            <li className="mb-2 hover:underline cursor-pointer">
+              Udemy Business
+            </li>
+            <li className="mb-2 hover:underline cursor-pointer">
+              Teach on Udemy
+            </li>
+            <li className="mb-2 hover:underline cursor-pointer">Get the app</li>
+            <li className="mb-2 hover:underline cursor-pointer">About us</li>
+            <li className="mb-2 hover:underline cursor-pointer">Contact us</li>
           </ul>
           <ul>
-            <li className="mb-2">Careers</li>
-            <li className="mb-2">Blog</li>
-            <li className="mb-2">Help and Support</li>
-            <li className="mb-2">Affiliate</li>
-            <li className="mb-2">Investors</li>
+            <li className="mb-2 hover:underline cursor-pointer">Careers</li>
+            <li className="mb-2 hover:underline cursor-pointer">Blog</li>
+            <li className="mb-2 hover:underline cursor-pointer">
+              Help and Support
+            </li>
+            <li className="mb-2 hover:underline cursor-pointer">Affiliate</li>
+            <li className="mb-2 hover:underline cursor-pointer">Investors</li>
           </ul>
           <ul>
-            <li className="mb-2">Terms</li>
-            <li className="mb-2">Privacy policy</li>
-            <li className="mb-2">Cookie settings</li>
-            <li className="mb-2">Sitemap</li>
-            <li className="mb-2">Accessibility statement</li>
+            <li className="mb-2 hover:underline cursor-pointer">Terms</li>
+            <li className="mb-2 hover:underline cursor-pointer">
+              Privacy policy
+            </li>
+            <li className="mb-2 hover:underline cursor-pointer">
+              Cookie settings
+            </li>
+            <li className="mb-2 hover:underline cursor-pointer">Sitemap</li>
+            <li className="mb-2 hover:underline cursor-pointer">
+              Accessibility statement
+            </li>
           </ul>
         </div>
         <Button
-          className="flex items-center gap-1 border border-white pr-12"
+          className="flex items-center gap-1 border border-white pr-12 hover:bg-neutral-900"
           borderNone
         >
           <svg

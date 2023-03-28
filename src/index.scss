@@ -21,6 +21,10 @@
     // height: auto;
     // margin-right: 15px !important;
   }
+  .banner-achievement .swiper-slide {
+    width: 385px;
+    // height: auto;
+  }
   .banner .swiper {
     height: 100%;
   }
@@ -68,6 +72,11 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+.course-instructer {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .top-categories-img {
   cursor: pointer;
   transition: .2s ease-in-out;
@@ -75,6 +84,10 @@
 .top-categories-img:hover {
   transform: scale(1.1);
 }
+.swiper-nav-btns button {
+  box-shadow: 0 3px 10px 3px rgba(0,0,0,0.1)
+}
+// ======
 #app {
   height: 100%;
 }

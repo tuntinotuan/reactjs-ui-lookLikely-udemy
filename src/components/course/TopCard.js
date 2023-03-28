@@ -6,7 +6,7 @@ const TopCard = ({ img, title }) => {
       <div className="h-[300px] overflow-hidden mb-2">
         <img src={img} alt="" className="top-categories-img w-full h-full" />
       </div>
-      <h2 className="text-[16px] font-bold mb-5">{title}</h2>
+      <h2 className="text-[16px] font-bold mb-5 cursor-pointer">{title}</h2>
     </div>
   );
 };

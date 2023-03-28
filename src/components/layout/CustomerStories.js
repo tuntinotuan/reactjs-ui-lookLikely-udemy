@@ -6,7 +6,7 @@ const CustomerStories = () => {
     <section className="flex flex-col items-center bg-slate-100 py-12">
       <BannerCustomer></BannerCustomer>
       <div className="flex items-center gap-3 mt-10 cursor-pointer">
-        <p className="text-[16px] font-bold text-purple-700">
+        <p className="text-[16px] font-bold text-purple-700 hover:text-purple-800">
           View more customer stories
         </p>
         <svg

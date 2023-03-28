@@ -1,5 +1,4 @@
 import React from "react";
-import { data } from "../../data/dataConfig";
 import Button from "../button/Button";
 
 const CourseCard = ({
@@ -12,19 +11,14 @@ const CourseCard = ({
   oldPrice,
   bestSeller = false,
 }) => {
-  console.log("data ~ fake: ", data);
   return (
     <div className="course-card h-full select-none">
       {/* {data && data.map((item) => ( */}
-      <img
-        src={img}
-        alt=""
-        className="w-full h-[200px] h-full object-cover mb-2"
-      />
+      <img src={img} alt="" className="w-full h-full object-cover mb-2" />
       {/* ))} */}
       <h3 className="course-title text-sm font-bold mb-2">{title}</h3>
       <span className="text-xs opacity-50 mb-2">
-        <span>{instructer}</span>
+        <p className="course-instructer">{instructer}</p>
       </span>
       <div className="rate flex items-center gap-1">
         <span className="text-textstart font-bold text-[16px]">{rate}</span>

@@ -1,4 +1,4 @@
-export const data = [
+export const dataCourses = [
   {
     img_course: "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
     title: "Learn Python: The Complete Python Programming Course",
@@ -50,14 +50,24 @@ export const data = [
     best_seller: true,
   },
   {
-    img_course: "https://img-b.udemycdn.com/course/240x135/405878_e5a0_3.jpg",
-    title: "Python for Beginners - Learn Programming from scratch",
-    instructor: "Edwin Diaz, Coding Faculty Solutions",
+    img_course: "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+    title: "Learn Python: The Complete Python Programming Course",
+    instructor: "Avinash, The Codex",
     rate: "4.3",
-    reviewing: "(2633)",
+    reviewing: "(2520)",
     current_price: "349,000",
-    original_price: "999,000",
+    original_price: "1,099,000",
     best_seller: false,
+  },
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/396876_cc92_7.jpg",
+    title: "Learning Python for Data Analysis and Visualization Ver 1",
+    instructor: "Jose Portilla",
+    rate: "4.3",
+    reviewing: "(18,922)",
+    current_price: "449,000",
+    original_price: "1,799,000",
+    best_seller: true,
   },
   {
     img_course: "https://img-b.udemycdn.com/course/240x135/405878_e5a0_3.jpg",
@@ -70,24 +80,166 @@ export const data = [
     best_seller: false,
   },
   {
-    img_course: "https://img-b.udemycdn.com/course/240x135/405878_e5a0_3.jpg",
-    title: "Python for Beginners - Learn Programming from scratch",
-    instructor: "Edwin Diaz, Coding Faculty Solutions",
-    rate: "4.3",
-    reviewing: "(2633)",
-    current_price: "349,000",
-    original_price: "999,000",
+    img_course: "https://img-b.udemycdn.com/course/240x135/449532_2aa9_7.jpg",
+    title: "Python Beyond the Basics - Object-Oriented Programming",
+    instructor: "Infinite Skills",
+    rate: "4.5",
+    reviewing: "(3018)",
+    current_price: "379,000",
+    original_price: "1,399,000",
     best_seller: false,
   },
+];
+
+export const dataGoalsAchieving = [
   {
-    img_course: "https://img-b.udemycdn.com/course/240x135/405878_e5a0_3.jpg",
-    title: "Python for Beginners - Learn Programming from scratch",
-    instructor: "Edwin Diaz, Coding Faculty Solutions",
-    rate: "4.3",
-    reviewing: "(2633)",
-    current_price: "349,000",
-    original_price: "999,000",
-    best_seller: false,
+    content: [
+      {
+        content_start:
+          "I am proud to say that after a few months of taking this course...",
+        content_bold:
+          "I passed my exam and am now an AWS Certified Cloud Practitioner!",
+        content_end: "This content was exactly what the CCP exam covered.",
+      },
+    ],
+    full_name: "Will A",
+    short_name: "WA",
+    btn_concerning: "[NEW] Ultimate AWS Certified Cloud Practitioner - 2022",
+  },
+  {
+    content: [
+      {
+        content_start: "This course helped me",
+        content_bold:
+          "freshen up on my product manager skills and land a job at Facebook!",
+        content_end: "Thanks guys :)",
+      },
+    ],
+    full_name: "Ron F",
+    short_name: "RF",
+    btn_concerning: "Become a Product Manager | Learn the Skills & Get the Job",
+  },
+  {
+    content: [
+      {
+        content_start:
+          "One of the best courses on management and leadership I have come across so far. The advice is practical, and examples highly relatable.",
+        content_bold: "Would help anyone become a better manager.",
+        content_end: "",
+      },
+    ],
+    full_name: "Phillip W",
+    short_name: "PW",
+    btn_concerning: "Leadership: Practical Leadership Skills",
+  },
+  {
+    content: [
+      {
+        content_start: "I highly",
+        content_bold: "recommend this course for all budding data scientists.",
+        content_end:
+          "Even people with no prior knowledge of any visualization tools can become a master after completing this course.",
+      },
+    ],
+    full_name: "Surya M",
+    short_name: "SM",
+    btn_concerning:
+      "Tableau 2022 A-Z: Hands-On Tableau Training for Data Science",
+  },
+];
+
+export const dataViewingStudents = [
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/1565838_e54e_16.jpg",
+    title: "The Complete 2023 Web Development Bootcamp",
+    instructor: "Dr. Angela Yu",
+    rate: "4.7",
+    reviewing: "(273,521)",
+    current_price: "429,000",
+    original_price: "1,899,000",
+    best_seller: true,
+  },
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/2776760_f176_10.jpg",
+    title: "100 Days of Code: The Complete Python Pro Bootcamp for 2023",
+    instructor: "Dr. Angela Yu",
+    rate: "4.7",
+    reviewing: "(187,295)",
+    current_price: "399,000",
+    original_price: "1,799,000",
+    best_seller: true,
+  },
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
+    title: "React - The Complete Guide (incl Hooks, React Router, Redux)",
+    instructor:
+      "Academind by Maximilian Schwarzmüller, Maximilian Schwarzmüller",
+    rate: "4.6",
+    reviewing: "(180,343)",
+    current_price: "499,000",
+    original_price: "2,199,000",
+    best_seller: true,
+  },
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/2196488_8fc7_10.jpg",
+    title: "Ultimate AWS Certified Solutions Architect Associate SAA-C03",
+    instructor: "Stephane Maarek | AWS Certified Cloud ",
+    rate: "4.7",
+    reviewing: "(173,548)",
+    current_price: "399,000",
+    original_price: "1,799,000",
+    best_seller: true,
+  },
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/1565838_e54e_16.jpg",
+    title: "The Complete 2023 Web Development Bootcamp",
+    instructor: "Dr. Angela Yu",
+    rate: "4.7",
+    reviewing: "(273,521)",
+    current_price: "429,000",
+    original_price: "1,899,000",
+    best_seller: true,
+  },
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/2776760_f176_10.jpg",
+    title: "100 Days of Code: The Complete Python Pro Bootcamp for 2023",
+    instructor: "Dr. Angela Yu",
+    rate: "4.7",
+    reviewing: "(187,295)",
+    current_price: "399,000",
+    original_price: "1,799,000",
+    best_seller: true,
+  },
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
+    title: "React - The Complete Guide (incl Hooks, React Router, Redux)",
+    instructor:
+      "Academind by Maximilian Schwarzmüller, Maximilian Schwarzmüller",
+    rate: "4.6",
+    reviewing: "(180,343)",
+    current_price: "499,000",
+    original_price: "2,199,000",
+    best_seller: true,
+  },
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/2196488_8fc7_10.jpg",
+    title: "Ultimate AWS Certified Solutions Architect Associate SAA-C03",
+    instructor: "Stephane Maarek | AWS Certified Cloud ",
+    rate: "4.7",
+    reviewing: "(173,548)",
+    current_price: "399,000",
+    original_price: "1,799,000",
+    best_seller: true,
+  },
+  {
+    img_course: "https://img-b.udemycdn.com/course/240x135/3142166_a637_3.jpg",
+    title: "[NEW] Ultimate AWS Certified Cloud Practitioner - 2023",
+    instructor: "Stephane Maarek | AWS Certified Cloud ",
+    rate: "4.7",
+    reviewing: "(137,180)",
+    current_price: "449,000",
+    original_price: "1,999,000",
+    best_seller: true,
   },
 ];
 

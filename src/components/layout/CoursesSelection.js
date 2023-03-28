@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { dataCourses } from "../../data/dataConfig";
 import Button from "../button/Button";
-import CourseCard from "../course/CourseCard";
 import ListCourse from "../course/ListCourse";
 import Menu from "./Menu";
 
@@ -28,7 +28,7 @@ const CoursesSelection = () => {
           animi accusantium.
         </p>
         <Button className="font-bold mb-8">Explore Python</Button>
-        <ListCourse></ListCourse>
+        <ListCourse data={dataCourses}></ListCourse>
       </div>
     </section>
   );
