@@ -6,12 +6,19 @@ import Search from "../search/Search";
 const Header = () => {
   return (
     <header className="header flex items-center justify-center gap-x-5 shadow-md">
-      <img
-        src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
-        alt=""
-        className="w-[90px] h-[70px] cursor-pointer"
-      />
-      <span className="cursor-pointer hover:text-purple-700">Categories</span>
+      <NavLink to="/">
+        <img
+          src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+          alt=""
+          className="w-[90px] h-[70px] cursor-pointer"
+        />
+      </NavLink>
+      <NavLink
+        to="/courses/development/"
+        className="cursor-pointer hover:text-purple-700"
+      >
+        Categories
+      </NavLink>
       <Search></Search>
       {/* <NavLink
         to="/"
