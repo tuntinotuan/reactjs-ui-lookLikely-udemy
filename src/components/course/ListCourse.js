@@ -9,7 +9,7 @@ import { data } from "../../data/dataConfig";
 
 const ListCourse = () => {
   return (
-    <div className="relative course-list mt-8">
+    <div className="relative course-list">
       <Swiper
         slidesPerView={5}
         grabCursor={"true"}

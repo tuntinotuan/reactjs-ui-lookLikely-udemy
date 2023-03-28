@@ -18,7 +18,9 @@ const Button = ({
       onClick={onClick}
       className={`${square ? square : "py-2 px-4"} ${
         borderNone ? "" : "border border-slate-900"
-      } ${mtAuto ? "mt-auto" : ""} ${full ? "w-full" : ""} ${className}`}
+      } ${mtAuto ? "mt-auto" : ""} ${full ? "w-full" : ""} ${className} ${
+        borderNone ? "hover:bg-slate-800" : "hover:bg-slate-200"
+      }`}
       {...props}
     >
       {children}

@@ -16,7 +16,11 @@ const CourseCard = ({
   return (
     <div className="course-card h-full select-none">
       {/* {data && data.map((item) => ( */}
-      <img src={img} alt="" className="w-full h-[200px] object-cover mb-2" />
+      <img
+        src={img}
+        alt=""
+        className="w-full h-[200px] h-full object-cover mb-2"
+      />
       {/* ))} */}
       <h3 className="course-title text-sm font-bold mb-2">{title}</h3>
       <span className="text-xs opacity-50 mb-2">

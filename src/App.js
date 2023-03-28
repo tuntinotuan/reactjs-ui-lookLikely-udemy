@@ -14,6 +14,10 @@ import GoalsAchieving from "./components/layout/GoalsAchieving";
 import ViewingStudents from "./components/layout/ViewingStudents";
 import TopCategories from "./components/layout/TopCategories";
 import FeaturedTopics from "./components/layout/FeaturedTopics";
+import LeadingCompanies from "./components/layout/LeadingCompanies";
+import CustomerStories from "./components/layout/CustomerStories";
+import UdemyBusiness from "./components/layout/UdemyBusiness";
+import Footer from "./components/layout/Footer";
 function App() {
   return (
     <Fragment>
@@ -24,6 +28,10 @@ function App() {
       <ViewingStudents></ViewingStudents>
       <TopCategories></TopCategories>
       <FeaturedTopics></FeaturedTopics>
+      <LeadingCompanies></LeadingCompanies>
+      <CustomerStories></CustomerStories>
+      <UdemyBusiness></UdemyBusiness>
+      <Footer></Footer>
     </Fragment>
   );
 }

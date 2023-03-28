@@ -8,7 +8,7 @@ const CoursesSelection = () => {
   return (
     <section className="page-container mb-10">
       <h1 className="text-3xl font-bold mb-4">A broad selection of courses</h1>
-      <p className="text-xl">
+      <p className="text-lg">
         Choose from 213,000 online video courses with new additions published
         every month
       </p>
@@ -27,7 +27,7 @@ const CoursesSelection = () => {
           perferendis quas odit voluptas saepe consectetur, corporis laudantium
           animi accusantium.
         </p>
-        <Button className="font-bold">Explore Python</Button>
+        <Button className="font-bold mb-8">Explore Python</Button>
         <ListCourse></ListCourse>
       </div>
     </section>

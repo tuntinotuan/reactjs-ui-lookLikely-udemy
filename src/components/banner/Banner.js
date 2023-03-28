@@ -16,10 +16,13 @@ const Banner = () => {
         slidesPerView={"auto"}
         // mousewheel={true}
         // keyboard={true}
-        // modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        // autoplay={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+        autoplay={true}
         // className="mySwiper"
       >
+        <SwiperSlide>
+          <BannerItem image="https://img-b.udemycdn.com/notices/home_carousel_slide/image/7c10f728-ee9c-4cf1-8235-15a8a56092ed.jpg"></BannerItem>
+        </SwiperSlide>
         <SwiperSlide>
           <BannerItem></BannerItem>
         </SwiperSlide>
