@@ -43,7 +43,7 @@ const Header = () => {
       </svg>
       <Button className="font-bold">Log in</Button>
       <Button className="bg-black text-white font-bold">Sign up</Button>
-      <Button className="" square>
+      <Button className="" square="py-2 px-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

@@ -6,6 +6,7 @@ const Button = ({
   full = false,
   mtAuto = false,
   square = false,
+  borderNone = false,
   type = "button",
   bgColor = "primary",
   children,
@@ -15,9 +16,9 @@ const Button = ({
     <button
       type={type}
       onClick={onClick}
-      className={`py-2 ${square ? "px-2" : "px-4"}  border border-slate-900 ${
-        mtAuto ? "mt-auto" : ""
-      } ${full ? "w-full" : ""} ${className}`}
+      className={`${square ? square : "py-2 px-4"} ${
+        borderNone ? "" : "border border-slate-900"
+      } ${mtAuto ? "mt-auto" : ""} ${full ? "w-full" : ""} ${className}`}
       {...props}
     >
       {children}

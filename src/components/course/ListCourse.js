@@ -5,6 +5,7 @@ import SwiperNavButtons from "../button/SwiperNavButtons";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { data } from "../../data/dataConfig";
 
 const ListCourse = () => {
   return (
@@ -15,36 +16,21 @@ const ListCourse = () => {
         spaceBetween={40}
         // slidesPerView={"auto"}
       >
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CourseCard></CourseCard>
-        </SwiperSlide>
+        {data &&
+          data.map((item) => (
+            <SwiperSlide>
+              <CourseCard
+                img={item.img_course}
+                title={item.title}
+                instructer={item.instructor}
+                rate={item.rate}
+                reviewing={item.reviewing}
+                currentPrice={item.current_price}
+                oldPrice={item.original_price}
+                bestSeller={item.best_seller}
+              ></CourseCard>
+            </SwiperSlide>
+          ))}
         <SwiperNavButtons
           positionLeftBtn="top-[50px]"
           positionRightBtn="top-[50px]"

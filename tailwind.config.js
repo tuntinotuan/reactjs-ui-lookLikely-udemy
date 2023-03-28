@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         primary: "#F62682",
         secondary: "#6f5cf1",
+        textstart: "#B4690E",
+        star: "#E59819",
+        btnsell: "#ECEB98",
       },
     },
   },
