@@ -1,5 +1,5 @@
 import React from "react";
-import { dataCompanies } from "../../data/dataConfig";
+import LogoCompanies from "../others/LogoCompanies";
 
 const LeadingCompanies = () => {
   return (
@@ -11,12 +11,7 @@ const LeadingCompanies = () => {
         Leading companies use the same courses to help employees keep their
         skills fresh.
       </p>
-      <div className="flex items-center justify-between">
-        {dataCompanies &&
-          dataCompanies.map((items) => (
-            <img src={items.img_companies} alt="" />
-          ))}
-      </div>
+      <LogoCompanies></LogoCompanies>
     </section>
   );
 };
