@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import AllCourses from "../components/layout/AllCourses";
 import ChooseCompanies from "../components/layout/ChooseCompanies";
 import CoursesStarted from "../components/layout/CoursesStarted";
 import FeaturedCourses from "../components/layout/FeaturedCourses";
@@ -12,6 +13,7 @@ const CoursesPage = () => {
       <CoursesStarted></CoursesStarted>
       <Facts></Facts>
       <FeaturedCourses></FeaturedCourses>
+      <AllCourses></AllCourses>
       <ChooseCompanies></ChooseCompanies>
     </Fragment>
   );
