@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import CoursesStarted from "../components/layout/CoursesStarted";
+import FeaturedCourses from "../components/layout/FeaturedCourses";
 import MenuCourses from "../components/layout/MenuCourses";
 import Facts from "../components/others/Facts";
 
@@ -9,6 +10,7 @@ const CoursesPage = () => {
       <MenuCourses></MenuCourses>
       <CoursesStarted></CoursesStarted>
       <Facts></Facts>
+      <FeaturedCourses></FeaturedCourses>
     </Fragment>
   );
 };

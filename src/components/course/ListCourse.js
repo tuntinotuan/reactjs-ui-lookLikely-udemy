@@ -6,11 +6,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const ListCourse = ({ data }) => {
+const ListCourse = ({ data, convertCard = false, top = "top-[50px]" }) => {
   return (
-    <div className="relative course-list">
+    <div
+      className={`${
+        convertCard ? "border border-slate-200 p-5" : ""
+      } relative course-list`}
+    >
       <Swiper
-        slidesPerView={5}
+        slidesPerView={convertCard ? "auto" : 5}
         grabCursor={"true"}
         spaceBetween={40}
         // slidesPerView={"auto"}
@@ -27,12 +31,13 @@ const ListCourse = ({ data }) => {
                 currentPrice={item.current_price}
                 oldPrice={item.original_price}
                 bestSeller={item.best_seller}
+                styleBanner={convertCard}
               ></CourseCard>
             </SwiperSlide>
           ))}
         <SwiperNavButtons
-          positionLeftBtn="top-[50px]"
-          positionRightBtn="top-[50px]"
+          positionLeftBtn={`${top}`}
+          positionRightBtn={`${top}`}
           sizeButton="w-12 h-12"
         ></SwiperNavButtons>
       </Swiper>

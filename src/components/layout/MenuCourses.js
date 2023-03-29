@@ -12,8 +12,8 @@ const MenuCourses = () => {
           alt=""
         />
       </div>
-      <nav>
-        <ul className="flex items-center justify-between text-sm text-slate-600 gap-9">
+      <nav className="px-4">
+        <ul className="flex items-center justify-between text-sm text-slate-600 gap-7">
           <li className="hover:text-purple-700 cursor-pointer">
             Web Development
           </li>
