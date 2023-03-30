@@ -15,7 +15,7 @@ const UsersPage = () => {
 
 function Container() {
   return (
-    <section className="flex justify-between gap-16 page-container w-full max-w-[860px] mt-10 mb-20">
+    <section className="flex justify-between gap-16 page-container w-full max-w-[860px] mt-12 mb-20">
       <Left></Left>
       <Right></Right>
     </section>
@@ -77,16 +77,20 @@ function Left() {
   );
 }
 function Right() {
+  const openNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
     <section className="flex-auto">
       {dataUsers.map((items) => (
-        <div>
+        <div className="text-[15px] font-bold">
           <img
             src={items.avatar}
             alt=""
             className="w-[200px] h-[200px] rounded-full mb-10"
           />
           <Button
+            onClick={() => openNewTab(items.link_website)}
             className="flex items-center justify-center gap-1 w-[200px] mb-2"
             square="py-3"
           >
@@ -107,11 +111,12 @@ function Right() {
             Website
           </Button>
           <Button
+            onClick={() => openNewTab(items.link_twitter)}
             className="flex items-center justify-center gap-1 w-[200px] mb-2"
             square="py-3"
           >
             <svg
-              className="w-5 h-5"
+              className="w-4 h-4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -120,11 +125,12 @@ function Right() {
             Twitter
           </Button>
           <Button
+            onClick={() => openNewTab(items.link_linkedin)}
             className="flex items-center justify-center gap-1 w-[200px]"
             square="py-3"
           >
             <svg
-              className="w-5 h-5"
+              className="w-4 h-4 rounded-md"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >

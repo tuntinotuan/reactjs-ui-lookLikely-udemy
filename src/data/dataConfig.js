@@ -474,10 +474,13 @@ export const dataBanner = [{ img_banner: "", title_banner: "" }];
 export const dataUsers = [
   {
     name_user: "Dr. Angela Yu",
-    avatar: "https://img-b.udemycdn.com/user/200_H/31334738_a13c_3.jpg",
     instructor: "Developer and Lead Instructor",
     total_students: "",
     reviews: "",
+    avatar: "https://img-b.udemycdn.com/user/200_H/31334738_a13c_3.jpg",
+    link_website: "https://www.appbrewery.co/",
+    link_twitter: "https://twitter.com/yu_angela",
+    link_linkedin: "https://linkedin.com/in/angela-yu-963a584b/",
     content: [
       {
         text_start: `I'm Angela, I'm a developer with a passion for teaching. I'm the`,
