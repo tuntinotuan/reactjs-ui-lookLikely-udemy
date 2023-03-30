@@ -11,25 +11,43 @@ const CourseCard = ({
   oldPrice,
   bestSeller = false,
   hotNew = false,
+
   styleBanner = false,
+  borderBottom = false,
+  adjustParent = "",
+  adjustImg = "",
+  adjustPrice = false,
+  adjustFontSize = false,
 }) => {
   return (
     <div
-      className={`${
-        styleBanner ? "flex items-start gap-7" : ""
-      } course-card h-full select-none`}
+      className={`${styleBanner ? "flex items-start gap-7" : ""} ${
+        borderBottom ? "border border-transparent border-b-slate-200" : ""
+      } course-card h-full select-none -z-1 ${adjustParent}`}
     >
-      <img
-        src={img}
-        alt=""
-        className={`${
-          styleBanner ? "flex-1 h-[260px]" : ""
-        } w-full object-cover mb-2`}
-      />
-      <div className={`${styleBanner ? "flex-auto h-full" : ""}`}>
+      <div
+        className={`${adjustImg ? "border border-slate-200" : ""} ${
+          styleBanner ? "" : "mb-2"
+        }`}
+      >
+        <img
+          src={img}
+          alt=""
+          className={`${
+            styleBanner ? `flex-1 ${adjustImg ? "h-[auto]" : "h-[260px]"}` : ""
+          } w-full object-cover`}
+        />
+      </div>
+      <div
+        className={`${styleBanner ? "flex-auto h-full" : ""} ${
+          !adjustFontSize ? "" : "relative"
+        }`}
+      >
         <h3
           className={`${
-            styleBanner ? "text-2xl max-w-[450px]" : "text-sm"
+            styleBanner && !adjustFontSize
+              ? "text-2xl max-w-[450px]"
+              : "text-sm"
           } course-title font-bold mb-2`}
         >
           {title}
@@ -59,8 +77,10 @@ const CourseCard = ({
         {/* <div className="flex flex-col flex-1"> */}
         <div
           className={`${
-            styleBanner ? "text-xl mt-auto absolute bottom-0" : ""
-          } flex items-center text-[16px] gap-2 mb-2`}
+            styleBanner && !adjustFontSize
+              ? "text-xl mt-auto absolute bottom-0"
+              : "mt-auto absolute bottom-0"
+          } flex items-center text-[16px] gap-2 mb-2 ${adjustPrice}`}
         >
           <span className="font-bold">
             <span className="underline">đ</span>

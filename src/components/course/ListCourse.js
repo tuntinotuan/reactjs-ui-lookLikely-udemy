@@ -5,8 +5,14 @@ import SwiperNavButtons from "../button/SwiperNavButtons";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay } from "swiper";
 
-const ListCourse = ({ data, convertCard = false, top = "top-[50px]" }) => {
+const ListCourse = ({
+  data,
+  convertCard = false,
+  top = "top-[50px]",
+  autoPlay = false,
+}) => {
   return (
     <div
       className={`${
@@ -15,9 +21,11 @@ const ListCourse = ({ data, convertCard = false, top = "top-[50px]" }) => {
     >
       <Swiper
         slidesPerView={convertCard ? "auto" : 5}
+        // slidesPerView={"auto"}
         grabCursor={"true"}
         spaceBetween={40}
-        // slidesPerView={"auto"}
+        modules={[Autoplay]}
+        autoplay={autoPlay}
       >
         {data &&
           data.map((item) => (

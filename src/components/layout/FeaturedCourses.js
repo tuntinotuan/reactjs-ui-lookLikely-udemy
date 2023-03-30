@@ -6,7 +6,12 @@ const FeaturedCourses = () => {
   return (
     <section className="page-container mb-12 max-h-[350px]">
       <h1 className="text-2xl font-bold mb-6">Featured courses</h1>
-      <ListCourse data={dataCourses} top="top-1/3" convertCard></ListCourse>
+      <ListCourse
+        data={dataCourses}
+        top="top-1/3"
+        convertCard
+        autoPlay
+      ></ListCourse>
     </section>
   );
 };
