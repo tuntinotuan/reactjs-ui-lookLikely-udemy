@@ -4,6 +4,7 @@ import Button from "../button/Button";
 import CourseCard from "../course/CourseCard";
 import ArticleMoneyBack from "../others/ArticleMoneyBack";
 import ShortBy from "../others/ShortBy";
+import CompaniesTrustedUdemy from "./CompaniesTrustedUdemy";
 
 const AllCourses = () => {
   return (
@@ -56,6 +57,7 @@ const AllCourses = () => {
               ></CourseCard>
             ))}
       </div>
+      <CompaniesTrustedUdemy></CompaniesTrustedUdemy>
     </section>
   );
 };

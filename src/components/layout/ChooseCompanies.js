@@ -12,7 +12,7 @@ const ChooseCompanies = () => {
         to build in-demand career skills.
       </h1>
       <div className="flex-1">
-        <LogoCompanies amount={5} brightness></LogoCompanies>
+        <LogoCompanies amount={5} brightness between></LogoCompanies>
       </div>
     </section>
   );
