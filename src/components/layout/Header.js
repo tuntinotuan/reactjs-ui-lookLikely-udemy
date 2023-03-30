@@ -38,9 +38,9 @@ const Header = () => {
       >
         Udemy Business
       </NavLink>
-      <span className="cursor-pointer hover:text-purple-700">
+      <NavLink to="/teaching" className="cursor-pointer hover:text-purple-700">
         Teach on Udemy
-      </span>
+      </NavLink>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

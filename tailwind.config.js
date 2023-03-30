@@ -15,6 +15,7 @@ module.exports = {
         hotnew: "#FCAEA0",
         partner: "#CEC0FC",
         darkudemy: "#1C1D1F",
+        contribute: "#5624D0",
       },
     },
   },

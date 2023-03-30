@@ -581,3 +581,24 @@ export const dataUsers = [
     ],
   },
 ];
+export const dataReasonsStart = [
+  {
+    img_reason: "https://s.udemycdn.com/teaching/value-prop-teach-v3.jpg",
+    title_reason: "Teach your way",
+    content_reason:
+      "Publish the course you want, in the way you want, and always have control of your own content.",
+  },
+  {
+    img_reason: "https://s.udemycdn.com/teaching/value-prop-inspire-v3.jpg",
+    title_reason: "Inspire learners",
+    content_reason:
+      "Teach what you know and help learners explore their interests, gain new skills, and advance their careers.",
+  },
+  {
+    img_reason:
+      "https://s.udemycdn.com/teaching/value-prop-get-rewarded-v3.jpg",
+    title_reason: "Get rewarded",
+    content_reason:
+      "Expand your professional network, build your expertise, and earn money on each paid enrollment.",
+  },
+];

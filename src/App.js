@@ -8,6 +8,7 @@ import PageNotFound from "./components/layout/PageNotFound";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const CoursesPage = lazy(() => import("./pages/CoursesPage"));
 const UsersPage = lazy(() => import("./pages/UsersPage"));
+const TeachingOnUdemyPage = lazy(() => import("./pages/TeachingOnUdemyPage"));
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
             <Route
               path="/user/:userId"
               element={<UsersPage></UsersPage>}
+            ></Route>
+            <Route
+              path="/teaching/"
+              element={<TeachingOnUdemyPage></TeachingOnUdemyPage>}
             ></Route>
             <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
           </Route>
