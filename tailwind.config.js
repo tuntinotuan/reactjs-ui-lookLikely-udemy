@@ -13,6 +13,7 @@ module.exports = {
         star: "#E59819",
         btnsell: "#ECEB98",
         hotnew: "#FCAEA0",
+        partner: "#CEC0FC",
         darkudemy: "#1C1D1F",
       },
     },

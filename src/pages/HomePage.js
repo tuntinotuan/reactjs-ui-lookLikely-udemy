@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Banner from "../components/banner/Banner";
 import CoursesSelection from "../components/layout/CoursesSelection";
 import CustomerStories from "../components/layout/CustomerStories";
@@ -12,7 +12,7 @@ import ViewingStudents from "../components/layout/ViewingStudents";
 
 const HomePage = () => {
   return (
-    <div>
+    <Fragment>
       <Banner></Banner>
       <CoursesSelection></CoursesSelection>
       <GoalsAchieving></GoalsAchieving>
@@ -22,7 +22,7 @@ const HomePage = () => {
       <LeadingCompanies></LeadingCompanies>
       <CustomerStories></CustomerStories>
       <UdemyBusiness></UdemyBusiness>
-    </div>
+    </Fragment>
   );
 };
 

@@ -7,6 +7,7 @@ import Main from "./components/layout/Main";
 import PageNotFound from "./components/layout/PageNotFound";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const CoursesPage = lazy(() => import("./pages/CoursesPage"));
+const UsersPage = lazy(() => import("./pages/UsersPage"));
 
 function App() {
   return (
@@ -26,7 +27,10 @@ function App() {
               path="/courses/development/"
               element={<CoursesPage></CoursesPage>}
             ></Route>
-            <Route path="/movie/:movieId" element={<>abc</>}></Route>
+            <Route
+              path="/user/:userId"
+              element={<UsersPage></UsersPage>}
+            ></Route>
             <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
           </Route>
         </Routes>

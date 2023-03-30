@@ -11,7 +11,7 @@ const LeadingCompanies = () => {
         Leading companies use the same courses to help employees keep their
         skills fresh.
       </p>
-      <LogoCompanies></LogoCompanies>
+      <LogoCompanies between></LogoCompanies>
     </section>
   );
 };

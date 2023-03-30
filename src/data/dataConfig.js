@@ -470,3 +470,111 @@ export const dataCustomerStories = [
 ];
 
 export const dataBanner = [{ img_banner: "", title_banner: "" }];
+
+export const dataUsers = [
+  {
+    name_user: "Dr. Angela Yu",
+    avatar: "https://img-b.udemycdn.com/user/200_H/31334738_a13c_3.jpg",
+    instructor: "Developer and Lead Instructor",
+    total_students: "",
+    reviews: "",
+    content: [
+      {
+        text_start: `I'm Angela, I'm a developer with a passion for teaching. I'm the`,
+        text_bold: `lead instructor`,
+        text_end: `I've helped hundreds of thousands of students learn to code and change their lives by becoming a developer. I've been invited by companies such as Twitter, Facebook and Google to teach their employees.`,
+      },
+    ],
+    my_courses: [
+      {
+        img_course:
+          "https://img-b.udemycdn.com/course/240x135/2776760_f176_10.jpg",
+        title: "100 Days of Code: The Complete Python Pro Bootcamp for 2023",
+        instructor: "Dr. Angela Yu",
+        rate: "4.7",
+        reviewing: "(188,009)",
+        current_price: "399,000",
+        original_price: "1,799,000",
+        best_seller: true,
+      },
+      {
+        img_course:
+          "https://img-b.udemycdn.com/course/240x135/1565838_e54e_16.jpg",
+        title: "The Complete 2023 Web Development Bootcamp",
+        instructor: "Dr. Angela Yu",
+        rate: "4.7",
+        reviewing: "(274,040)",
+        current_price: "429,000",
+        original_price: "1,899,000",
+        best_seller: true,
+      },
+      {
+        img_course:
+          "https://img-b.udemycdn.com/course/240x135/1778502_f4b9_12.jpg",
+        title: "iOS & Swift - The Complete iOS App Development Bootcamp",
+        instructor: "Dr. Angela Yu",
+        rate: "4.7",
+        reviewing: "(83,968)",
+        current_price: "549,000",
+        original_price: "2,399,000",
+        best_seller: true,
+      },
+      {
+        img_course:
+          "https://img-b.udemycdn.com/course/240x135/2259120_305f_6.jpg",
+        title: "The Complete Flutter Development Bootcamp with Dart",
+        instructor: "Dr. Angela Yu",
+        rate: "4.6",
+        reviewing: "(48,136)",
+        current_price: "429,000",
+        original_price: "1,899,000",
+        best_seller: false,
+      },
+      {
+        img_course:
+          "https://img-b.udemycdn.com/course/240x135/4367336_0573_7.jpg",
+        title:
+          "【한글자막】 Python 부트캠프 : 100개의 프로젝트로 Python 개발 완전 정복",
+        instructor: "Dr. Angela Yu",
+        rate: "4.8",
+        reviewing: "(1,510)",
+        current_price: "349,000",
+        original_price: "1,499,000",
+        best_seller: false,
+      },
+      {
+        img_course:
+          "https://img-b.udemycdn.com/course/240x135/1318112_faa8_5.jpg",
+        title: "Complete 2022 Data Science & Machine Learning Bootcamp",
+        instructor: "Dr. Angela Yu",
+        rate: "4.6",
+        reviewing: "(5,203)",
+        current_price: "399,000",
+        original_price: "1,799,000",
+        best_seller: false,
+      },
+      {
+        img_course:
+          "https://img-b.udemycdn.com/course/240x135/1255050_8038.jpg",
+        title: "The Complete Crowdfunding Course for Kickstarter & Indiegogo",
+        instructor: "Dr. Angela Yu",
+        rate: "4.6",
+        reviewing: "(1,506)",
+        current_price: "429,000",
+        original_price: "1,699,000",
+        best_seller: true,
+      },
+      {
+        img_course:
+          "https://img-b.udemycdn.com/course/240x135/2551847_4832_9.jpg",
+        title: "iOS 12 Swift 4.2 - The Complete iOS App Development Bootcamp",
+        instructor: "Dr. Angela Yu",
+        rate: "4.4",
+        reviewing: "(507)",
+        current_price: "399,000",
+        original_price: "1,799,000",
+        best_seller: false,
+      },
+    ],
+  },
+];

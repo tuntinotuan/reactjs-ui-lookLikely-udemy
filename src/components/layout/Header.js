@@ -32,9 +32,12 @@ const Header = () => {
         >
         Movies
       </NavLink> */}
-      <span className="cursor-pointer hover:text-purple-700">
+      <NavLink
+        to="/user/:userId"
+        className="cursor-pointer hover:text-purple-700"
+      >
         Udemy Business
-      </span>
+      </NavLink>
       <span className="cursor-pointer hover:text-purple-700">
         Teach on Udemy
       </span>

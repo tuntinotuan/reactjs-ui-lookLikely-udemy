@@ -47,7 +47,7 @@ const CourseCard = ({
           className={`${
             styleBanner && !adjustFontSize
               ? "text-2xl max-w-[450px]"
-              : "text-sm"
+              : "text-[16px]"
           } course-title font-bold mb-2`}
         >
           {title}
@@ -77,9 +77,11 @@ const CourseCard = ({
         {/* <div className="flex flex-col flex-1"> */}
         <div
           className={`${
-            styleBanner && !adjustFontSize
-              ? "text-xl mt-auto absolute bottom-0"
-              : "mt-auto absolute bottom-0"
+            styleBanner
+              ? `${
+                  adjustFontSize ? "text-[16px]" : "text-xl"
+                } mt-auto absolute bottom-0`
+              : ""
           } flex items-center text-[16px] gap-2 mb-2 ${adjustPrice}`}
         >
           <span className="font-bold">

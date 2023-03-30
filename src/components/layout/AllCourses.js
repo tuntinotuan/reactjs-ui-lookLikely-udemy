@@ -52,12 +52,35 @@ const AllCourses = () => {
                 borderBottom
                 adjustParent="relative p-3"
                 adjustImg
-                adjustPrice="flex-col text-sm right-0 top-0 bottom-none"
+                adjustPrice="flex-col right-0 top-0 bottom-none"
                 adjustFontSize
               ></CourseCard>
             ))}
       </div>
       <CompaniesTrustedUdemy></CompaniesTrustedUdemy>
+      <div className="-z-1 border border-transparent border-t-slate-200">
+        {dataCourses &&
+          dataCourses
+            .slice(5, 10)
+            .map((items) => (
+              <CourseCard
+                img={items.img_course}
+                title={items.title}
+                instructer={items.instructor}
+                rate={items.rate}
+                reviewing={items.reviewing}
+                currentPrice={items.current_price}
+                oldPrice={items.original_price}
+                bestSeller={items.best_seller}
+                styleBanner
+                borderBottom
+                adjustParent="relative p-3"
+                adjustImg
+                adjustPrice="flex-col right-0 top-0 bottom-none"
+                adjustFontSize
+              ></CourseCard>
+            ))}
+      </div>
     </section>
   );
 };
