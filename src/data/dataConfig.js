@@ -602,3 +602,29 @@ export const dataReasonsStart = [
       "Expand your professional network, build your expertise, and earn money on each paid enrollment.",
   },
 ];
+export const dataFeaturedTeacher = [
+  {
+    avatar_teacher:
+      "https://s.udemycdn.com/teaching/instructors/en/frank-1x-v2.jpg",
+    comment_teacher:
+      "“I'm proud to wake up knowing my work is helping people around the world improve their careers and build great things. While being a full-time instructor is hard work, it lets you work when, where, and how you want.”",
+    name_teacher: "Frank Kane",
+    career_teacher: "Data Science & IT Certifications",
+  },
+  {
+    avatar_teacher:
+      "https://s.udemycdn.com/teaching/instructors/en/paulo-1x.jpg",
+    comment_teacher:
+      "“Udemy has changed my life. It's allowed me to follow my passion and become a teacher I love to see my students succeed and hear them say they've learned more, quicker, from my courses than they did in college. It's so humbling.”",
+    name_teacher: "Paulo Dichone",
+    career_teacher: "Developer (Android Speciality)",
+  },
+  {
+    avatar_teacher:
+      "https://s.udemycdn.com/teaching/instructors/en/deborah-1x.jpg",
+    comment_teacher:
+      "“Teaching on Udemy has provided me with two important elements: the opportunity to reach more learners than I ever would be able to on my own and a steady stream of extra income.”",
+    name_teacher: "Deborah Grayson Riege",
+    career_teacher: "Leadership, Communication",
+  },
+];

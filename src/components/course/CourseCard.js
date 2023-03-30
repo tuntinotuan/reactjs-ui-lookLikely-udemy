@@ -18,12 +18,15 @@ const CourseCard = ({
   adjustImg = "",
   adjustPrice = false,
   adjustFontSize = false,
+
+  key,
 }) => {
   return (
     <div
       className={`${styleBanner ? "flex items-start gap-7" : ""} ${
         borderBottom ? "border border-transparent border-b-slate-200" : ""
       } course-card h-full select-none -z-1 cursor-pointer ${adjustParent}`}
+      key={key}
     >
       <div
         className={`${adjustImg ? "border border-slate-200" : ""} ${
