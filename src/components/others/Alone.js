@@ -7,10 +7,10 @@ const Alone = ({ translate = "translate-x-1/3" }) => {
         <img
           src="https://s.udemycdn.com/teaching/support-1-v3.jpg"
           alt=""
-          className={`-${translate}`}
+          className={`-${translate} -translate-x-1/3`}
         />
       </div>
-      <div className="w-full max-w-[700px] h-auto">
+      <div className="w-full max-w-[600px] h-auto">
         <h1 className="text-4xl font-bold">You won't have to do it alone</h1>
         <p className="text-xl my-5">
           <span className="font-bold"></span>
@@ -24,7 +24,7 @@ const Alone = ({ translate = "translate-x-1/3" }) => {
         <a
           href="https://teach.udemy.com/teaching-on-udemy/"
           target="_blank"
-          className="text-lg text-purple-700 hover:text-purple-800 underline"
+          className="text-lg font-bold text-purple-700 hover:text-purple-800 underline"
         >
           Need more details before your start? Learn more.
         </a>

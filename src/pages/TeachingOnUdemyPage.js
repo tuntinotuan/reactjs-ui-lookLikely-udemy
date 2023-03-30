@@ -3,6 +3,7 @@ import BannerTeaching from "../components/banner/BannerTeaching";
 import ChooseCompanies from "../components/layout/ChooseCompanies";
 import Alone from "../components/others/Alone";
 import BecomeAnInstructor from "../components/others/BecomeAnInstructor";
+import HowToBegin from "../components/others/HowToBegin";
 import ReasonsStart from "../components/others/ReasonsStart";
 import ContributeTo from "./ContributeTo";
 
@@ -12,6 +13,7 @@ const TeachingOnUdemyPage = () => {
       <BannerTeaching></BannerTeaching>
       <ReasonsStart></ReasonsStart>
       <ContributeTo></ContributeTo>
+      <HowToBegin></HowToBegin>
       <Alone></Alone>
       <BecomeAnInstructor></BecomeAnInstructor>
       <ChooseCompanies></ChooseCompanies>

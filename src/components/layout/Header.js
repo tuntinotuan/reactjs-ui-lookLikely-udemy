@@ -20,18 +20,6 @@ const Header = () => {
         Categories
       </NavLink>
       <Search></Search>
-      {/* <NavLink
-        to="/"
-        className={({ isActive }) => (isActive ? "text-primary" : "")}
-        >
-        Home
-        </NavLink>
-        <NavLink
-        to="/movies"
-        className={({ isActive }) => (isActive ? "text-primary" : "")}
-        >
-        Movies
-      </NavLink> */}
       <NavLink
         to="/user/:userId"
         className="cursor-pointer hover:text-purple-700"
