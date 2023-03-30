@@ -32,6 +32,7 @@ const ListCourse = ({ data, convertCard = false, top = "top-[50px]" }) => {
                 oldPrice={item.original_price}
                 bestSeller={item.best_seller}
                 styleBanner={convertCard}
+                // hotNew
               ></CourseCard>
             </SwiperSlide>
           ))}

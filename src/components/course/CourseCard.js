@@ -10,6 +10,7 @@ const CourseCard = ({
   currentPrice,
   oldPrice,
   bestSeller = false,
+  hotNew = false,
   styleBanner = false,
 }) => {
   return (
@@ -23,7 +24,7 @@ const CourseCard = ({
         alt=""
         className={`${
           styleBanner ? "flex-1 h-[260px]" : ""
-        } w-full h-full object-cover mb-2`}
+        } w-full object-cover mb-2`}
       />
       <div className={`${styleBanner ? "flex-auto h-full" : ""}`}>
         <h3
@@ -58,7 +59,7 @@ const CourseCard = ({
         {/* <div className="flex flex-col flex-1"> */}
         <div
           className={`${
-            styleBanner ? "mt-auto absolute bottom-0" : ""
+            styleBanner ? "text-xl mt-auto absolute bottom-0" : ""
           } flex items-center text-[16px] gap-2 mb-2`}
         >
           <span className="font-bold">
@@ -77,6 +78,15 @@ const CourseCard = ({
             square="py-1 px-2"
           >
             Bestseller
+          </Button>
+        ) : null}
+        {hotNew ? (
+          <Button
+            className="bg-hotnew text-xs font-bold text-slate-800"
+            borderNone
+            square="py-1 px-2"
+          >
+            Hot & New
           </Button>
         ) : null}
       </div>

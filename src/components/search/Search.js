@@ -6,7 +6,7 @@ const Search = () => {
     setFilter(e.target.value);
   };
   return (
-    <div className="flex items-center w-[560px] h-[50px] border border-slate-900 rounded-full bg-slate-50 px-4 py-2">
+    <div className="flex items-center w-[562px] h-[48px] border border-slate-900 rounded-full bg-slate-50 px-3 py-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -14,8 +14,10 @@ const Search = () => {
         strokeWidth="1.5"
         stroke="currentColor"
         className={`w-6 h-6 ${
-          filter !== "" ? "text-slate-900" : "text-slate-400"
-        }`}
+          filter !== ""
+            ? "text-slate-900 cursor-pointer"
+            : "text-slate-400 cursor-wait"
+        } `}
       >
         <path
           strokeLinecap="round"
@@ -26,7 +28,7 @@ const Search = () => {
       <input
         type="text"
         placeholder="Search for anything"
-        className={`w-full h-full px-2 bg-slate-50 outline-none`}
+        className={`w-full h-full px-4 text-slate-900 bg-slate-50 outline-none`}
         onChange={handleChangeInput}
       />
     </div>
