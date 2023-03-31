@@ -5,7 +5,7 @@ import SwiperNavButtons from "../button/SwiperNavButtons";
 
 const SlidesTeacherFeatured = () => {
   return (
-    <section className="banner h-[400px] max-w-[810px] mx-auto">
+    <section className="slide-teacher h-[400px] max-w-[900px] mx-auto">
       <Swiper
         cssMode={true}
         grabCursor="true"
@@ -25,8 +25,8 @@ const SlidesTeacherFeatured = () => {
             </SwiperSlide>
           ))}
         <SwiperNavButtons
-          positionLeftBtn="bottom-[70px]"
-          positionRightBtn="bottom-[70px]"
+          positionLeftBtn="bottom-[180px]"
+          positionRightBtn="bottom-[180px]"
           sizeButton="w-12 h-12"
           // positionLeftBtn="left-[-10px] bottom-[20px]"
         ></SwiperNavButtons>

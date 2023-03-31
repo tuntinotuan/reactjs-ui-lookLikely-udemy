@@ -87,7 +87,11 @@
 .swiper-nav-btns button {
   box-shadow: 0 3px 10px 3px rgba(0,0,0,0.1)
 }
-// ======
+// Customize swiper
+.slide-teacher .swiper {
+  padding: 0 40px;
+}
+// ================================
 #app {
   height: 100%;
 }

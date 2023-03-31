@@ -4,9 +4,9 @@ import ChooseCompanies from "../components/layout/ChooseCompanies";
 import TeacherHistory from "../components/layout/TeacherHistory";
 import Alone from "../components/others/Alone";
 import BecomeAnInstructor from "../components/others/BecomeAnInstructor";
+import ContributeTo from "../components/others/ContributeTo";
 import HowToBegin from "../components/others/HowToBegin";
 import ReasonsStart from "../components/others/ReasonsStart";
-import ContributeTo from "./ContributeTo";
 
 const TeachingOnUdemyPage = () => {
   return (
