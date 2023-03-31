@@ -7,6 +7,7 @@ import Main from "./components/layout/Main";
 import PageNotFound from "./components/layout/PageNotFound";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const CoursesPage = lazy(() => import("./pages/CoursesPage"));
+const CourseDetailsPage = lazy(() => import("./pages/CourseDetailsPage"));
 const UsersPage = lazy(() => import("./pages/UsersPage"));
 const TeachingOnUdemyPage = lazy(() => import("./pages/TeachingOnUdemyPage"));
 
@@ -27,6 +28,10 @@ function App() {
             <Route
               path="/courses/development/"
               element={<CoursesPage></CoursesPage>}
+            ></Route>
+            <Route
+              path="/course/learning-python-for-data-analysis-and-visualization/"
+              element={<CourseDetailsPage></CourseDetailsPage>}
             ></Route>
             <Route
               path="/user/:userId"

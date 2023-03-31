@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../button/Button";
+import { useNavigate } from "react-router-dom";
 
 const CourseCard = ({
   img,
@@ -21,12 +22,16 @@ const CourseCard = ({
 
   key,
 }) => {
+  const navigate = useNavigate();
   return (
     <div
       className={`${styleBanner ? "flex items-start gap-7" : ""} ${
         borderBottom ? "border border-transparent border-b-slate-200" : ""
       } course-card h-full select-none -z-1 cursor-pointer ${adjustParent}`}
       key={key}
+      onClick={() =>
+        navigate("/course/learning-python-for-data-analysis-and-visualization/")
+      }
     >
       <div
         className={`${adjustImg ? "border border-slate-200" : ""} ${
