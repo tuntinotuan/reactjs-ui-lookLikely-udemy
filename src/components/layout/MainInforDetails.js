@@ -21,7 +21,7 @@ const MainInforDetails = () => {
           <h1 className="text-3xl font-bold">
             Learning Python for Data Analysis and Visualization Ver 1
           </h1>
-          <p className="my-4">
+          <p className="text-lg my-4">
             Learn python and how to use it to analyze,visualize and present
             data. Includes tons of sample code and hours of video!
           </p>
