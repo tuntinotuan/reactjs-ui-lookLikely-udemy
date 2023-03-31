@@ -2,6 +2,7 @@ import React from "react";
 import { SwiperSlide, Swiper, useSwiper } from "swiper/react";
 import { dataFeaturedTeacher } from "../../data/dataConfig";
 import SwiperNavButtons from "../button/SwiperNavButtons";
+import { Autoplay } from "swiper";
 
 const SlidesTeacherFeatured = () => {
   return (
@@ -10,8 +11,8 @@ const SlidesTeacherFeatured = () => {
         cssMode={true}
         grabCursor="true"
         slidesPerView={"auto"}
-        // modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
-        // autoplay={true}
+        modules={[Autoplay]}
+        autoplay={true}
       >
         {dataFeaturedTeacher &&
           dataFeaturedTeacher.map((items) => (

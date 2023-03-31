@@ -24,7 +24,7 @@ const Alone = ({ translate = "translate-x-1/3" }) => {
         <a
           href="https://teach.udemy.com/teaching-on-udemy/"
           target="_blank"
-          className="text-lg font-bold text-purple-700 hover:text-purple-800 underline"
+          className="text-[15px] font-bold text-purple-700 hover:text-purple-800 underline"
         >
           Need more details before your start? Learn more.
         </a>

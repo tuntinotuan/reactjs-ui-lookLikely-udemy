@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Button from "../button/Button";
-import { dataCustomerStories, dataGoalsAchieving } from "../../data/dataConfig";
+import { dataGoalsAchieving } from "../../data/dataConfig";
 
 const BannerAchievement = () => {
   return (

@@ -475,8 +475,8 @@ export const dataUsers = [
   {
     name_user: "Dr. Angela Yu",
     instructor: "Developer and Lead Instructor",
-    total_students: "",
-    reviews: "",
+    total_students: "1,991,608",
+    reviews: "603,368",
     avatar: "https://img-b.udemycdn.com/user/200_H/31334738_a13c_3.jpg",
     link_website: "https://www.appbrewery.co/",
     link_twitter: "https://twitter.com/yu_angela",
