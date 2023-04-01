@@ -9,11 +9,10 @@ const dataLocal = [
   "Certificate of completion",
 ];
 const VideoCourse = ({ offset }) => {
-  let pointScrollFixed = offset > 200;
-  // const scrollbarHeight = document.body.offsetHeight;
-  const scrollbarHeight = window.innerHeight;
-  let pointScrollSticky = offset > scrollbarHeight - 200;
-  console.log("scrollbarHeight", scrollbarHeight);
+  let pointScrollFixed = offset > 299;
+  const scrollbarHeight = document.body.scrollHeight;
+  let pointScrollSticky = offset > scrollbarHeight - 999;
+  console.log("scrollbarHeight", document.body.scrollHeight);
   console.log("offset", offset);
   return (
     <section
@@ -25,7 +24,7 @@ const VideoCourse = ({ offset }) => {
                 : "fixed top-4 z-[99]"
             } max-w-[350px]`
           : "-translate-y-[332px]"
-      } bg-white border border-white shadow-md`}
+      } bg-white border border-white shadow-lg`}
       // className={`sticky bottom-0 bg-white border border-white shadow-md`}
     >
       <div
