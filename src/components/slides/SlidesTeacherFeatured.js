@@ -13,7 +13,7 @@ const SlidesTeacherFeatured = () => {
         navigation={true}
         slidesPerView={"auto"}
         modules={[Autoplay, Navigation]}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 3000 }}
       >
         {dataFeaturedTeacher &&
           dataFeaturedTeacher.map((items) => (

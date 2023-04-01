@@ -10,8 +10,9 @@ const dataLocal = [
 ];
 const VideoCourse = ({ offset }) => {
   let pointScrollFixed = offset > 200;
-  const scrollbarHeight = document.body.offsetWidth;
-  let pointScrollSticky = offset > scrollbarHeight + 600;
+  // const scrollbarHeight = document.body.offsetHeight;
+  const scrollbarHeight = window.innerHeight;
+  let pointScrollSticky = offset > scrollbarHeight - 200;
   console.log("scrollbarHeight", scrollbarHeight);
   console.log("offset", offset);
   return (

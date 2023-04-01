@@ -7,6 +7,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import WhatYouLearn from "../components/layout/WhatYouLearn";
 import VideoCourse from "../components/layout/VideoCourse";
+import CompaniesOffer from "../components/layout/CompaniesOffer";
+import CourseContent from "../components/course/CourseContent";
+import Requirements from "../components/others/Requirements";
 
 const CourseDetailsPage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -52,7 +55,9 @@ function Left() {
   return (
     <Fragment>
       <WhatYouLearn></WhatYouLearn>
-      <WhatYouLearn></WhatYouLearn>
+      <CompaniesOffer></CompaniesOffer>
+      <CourseContent></CourseContent>
+      <Requirements></Requirements>
     </Fragment>
   );
 }

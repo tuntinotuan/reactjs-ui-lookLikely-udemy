@@ -157,6 +157,8 @@ body {
 //   background-position: center;
 //   z-index: 50;
 // }
+
+.course-list .swiper-button-next,
 .slide-teacher .swiper-button-next {
   background-image: url(https://cdn-icons-png.flaticon.com/512/318/318476.png);
   background-repeat: no-repeat;
@@ -165,7 +167,9 @@ body {
   background-size: 100% auto;
   background-position: center;
   z-index: 999;
+  filter: blur(0.7px);
 }
+.course-list .swiper-button-next::after,
 .slide-teacher .swiper-button-next::after{
   display: none;
 }
@@ -178,11 +182,13 @@ body {
   background-size: 100% auto;
   background-position: center;
   z-index: 999;
+  filter: blur(0.7px);
 }
 .slide-teacher .swiper-button-prev::after{
   display: none;
 }
 
+.course-list .swiper-button-next.swiper-button-disabled,
 .slide-teacher .swiper-button-next.swiper-button-disabled, 
 .slide-teacher .swiper-button-prev.swiper-button-disabled {
   display: none;
