@@ -1,8 +1,8 @@
 import React from "react";
-import { SwiperSlide, Swiper, useSwiper } from "swiper/react";
+import { SwiperSlide, Swiper } from "swiper/react";
 import { dataFeaturedTeacher } from "../../data/dataConfig";
 import SwiperNavButtons from "../button/SwiperNavButtons";
-import { Autoplay } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
 const SlidesTeacherFeatured = () => {
   return (
@@ -10,9 +10,10 @@ const SlidesTeacherFeatured = () => {
       <Swiper
         cssMode={true}
         grabCursor="true"
+        navigation={true}
         slidesPerView={"auto"}
-        modules={[Autoplay]}
-        autoplay={true}
+        modules={[Autoplay, Navigation]}
+        autoplay={{ delay: 5000 }}
       >
         {dataFeaturedTeacher &&
           dataFeaturedTeacher.map((items) => (
@@ -25,12 +26,11 @@ const SlidesTeacherFeatured = () => {
               ></BannerItem>
             </SwiperSlide>
           ))}
-        <SwiperNavButtons
+        {/* <SwiperNavButtons
           positionLeftBtn="bottom-[180px]"
           positionRightBtn="bottom-[180px]"
           sizeButton="w-12 h-12"
-          // positionLeftBtn="left-[-10px] bottom-[20px]"
-        ></SwiperNavButtons>
+        ></SwiperNavButtons> */}
       </Swiper>
     </section>
   );
