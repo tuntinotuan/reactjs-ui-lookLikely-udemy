@@ -6,7 +6,7 @@ const CourseAttention = ({ scroll }) => {
     <section
       className={`bg-darkudemy text-white py-4 shadow-lg fixed top-0 left-0 right-0 ${
         scroll !== 0 ? "block" : "hidden"
-      }`}
+      } z-40`}
     >
       <div className="page-container">
         <h1 className="text-sm font-bold mb-2">

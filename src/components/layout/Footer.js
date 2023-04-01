@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../button/Button";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -62,11 +63,13 @@ const Footer = () => {
         </Button>
       </div>
       <div className="flex justify-between items-center">
-        <img
-          src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
-          alt=""
-          className="w-[90px] cursor-pointer"
-        />
+        <NavLink to="/">
+          <img
+            src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+            alt=""
+            className="w-[90px] cursor-pointer"
+          />
+        </NavLink>
         <span className="text-xs">© 2023 Udemy, Inc.</span>
       </div>
     </footer>

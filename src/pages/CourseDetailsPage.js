@@ -5,6 +5,8 @@ import CourseAttention from "../components/others/CourseAttention";
 import ChooseCompanies from "../components/layout/ChooseCompanies";
 import { useState } from "react";
 import { useEffect } from "react";
+import WhatYouLearn from "../components/layout/WhatYouLearn";
+import VideoCourse from "../components/layout/VideoCourse";
 
 const CourseDetailsPage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -22,15 +24,43 @@ const CourseDetailsPage = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  console.log(offset);
+  // console.log(offset);
   return (
     <Fragment>
       <MainInforDetails></MainInforDetails>
       <CourseAttention scroll={offset}></CourseAttention>
+      <BodyBelow scroll={offset}></BodyBelow>
       <ChooseCompanies></ChooseCompanies>
     </Fragment>
   );
 };
-
+function BodyBelow({ scroll }) {
+  return (
+    <section className="py-8 h-auto">
+      <div className="page-container-fluid relative h-full flex items-start gap-10">
+        <div className="h-full w-[690px]">
+          <Left></Left>
+        </div>
+        <div className="flex flex-col justify-end h-full w-[350px] px-2">
+          <Right scroll={scroll}></Right>
+        </div>
+      </div>
+    </section>
+  );
+}
+function Left() {
+  return (
+    <Fragment>
+      <WhatYouLearn></WhatYouLearn>
+      <WhatYouLearn></WhatYouLearn>
+    </Fragment>
+  );
+}
+function Right({ scroll }) {
+  return (
+    <Fragment>
+      <VideoCourse offset={scroll}></VideoCourse>
+    </Fragment>
+  );
+}
 export default CourseDetailsPage;

@@ -13,7 +13,7 @@ const Header = () => {
     setCart(false);
   };
   return (
-    <header className="header relative flex items-center justify-center gap-x-5 shadow-md">
+    <header className="header relative flex items-center justify-center gap-x-5 bg-white shadow-md z-50">
       <NavLink to="/">
         <img
           src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"

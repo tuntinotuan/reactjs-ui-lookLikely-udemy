@@ -16,6 +16,7 @@ module.exports = {
         partner: "#CEC0FC",
         darkudemy: "#1C1D1F",
         contribute: "#5624D0",
+        btnadd: "#A435F0",
       },
     },
   },
