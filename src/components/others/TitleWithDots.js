@@ -5,11 +5,11 @@ const dataLocal = [
   "Have a computer (either Mac, Windows, or Linux)",
   "Desire to learn!",
 ];
-const Requirements = () => {
+const TitleWithDots = ({ title = "Requirements", data = dataLocal }) => {
   return (
     <section>
-      <h1 className="text-2xl font-bold mt-8 mb-5">Requirements</h1>
-      {dataLocal.map((items) => (
+      <h1 className="text-2xl font-bold mt-8 mb-5">{title}</h1>
+      {data.map((items) => (
         <div className="flex items-center gap-5 text-slate-600 pl-1 mb-2">
           <div className="w-2 h-2 bg-darkudemy rounded-full"></div>
           <p>{items}</p>
@@ -19,4 +19,4 @@ const Requirements = () => {
   );
 };
 
-export default Requirements;
+export default TitleWithDots;
