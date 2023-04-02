@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CourseDetailsIntructor = () => {
+const CourseDetailsInstructor = () => {
   const [showMore, setShowMore] = useState(false);
   const handleShowMore = () => {
     setShowMore(!showMore);
@@ -8,8 +8,12 @@ const CourseDetailsIntructor = () => {
   return (
     <section className="py-5">
       <h1 className="text-2xl font-bold mb-5">Instructor</h1>
-      <h2 className="text-xl font-bold text-contribute">Jose Portilla</h2>
-      <h3 className="opacity-50">Head of Data Science at Pierian Training</h3>
+      <h2 className="text-xl max-w-[122px] font-bold text-contribute border border-transparent border-b-contribute cursor-pointer">
+        Jose Portilla
+      </h2>
+      <h3 className="opacity-50 mt-2">
+        Head of Data Science at Pierian Training
+      </h3>
       <div className="profile flex items-center gap-5 py-2">
         <img
           src="https://img-b.udemycdn.com/user/200_H/9685726_67e7_4.jpg"
@@ -123,4 +127,4 @@ const CourseDetailsIntructor = () => {
   );
 };
 
-export default CourseDetailsIntructor;
+export default CourseDetailsInstructor;

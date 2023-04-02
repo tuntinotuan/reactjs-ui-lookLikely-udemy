@@ -13,7 +13,9 @@ import TitleWithDots from "../components/others/TitleWithDots";
 import CourseDescription from "../components/course/CourseDescription";
 import StudentsAlsoBought from "../components/layout/StudentsAlsoBought";
 import FrequentlyBoughtTogether from "../components/layout/FrequentlyBoughtTogether";
-import CourseDetailsIntructor from "../components/layout/CourseDetailsIntructor";
+import CourseDetailsInstructor from "../components/layout/CourseDetailsInstructor";
+import UserComment from "../components/others/UserComment";
+import Button from "../components/button/Button";
 
 const CourseDetailsPage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -65,7 +67,8 @@ function Left() {
       <CourseDescription></CourseDescription>
       <StudentsAlsoBought></StudentsAlsoBought>
       <FrequentlyBoughtTogether></FrequentlyBoughtTogether>
-      <CourseDetailsIntructor></CourseDetailsIntructor>
+      <CourseDetailsInstructor></CourseDetailsInstructor>
+      <CourseRating></CourseRating>
     </Fragment>
   );
 }
@@ -76,4 +79,60 @@ function Right({ scroll }) {
     </Fragment>
   );
 }
+function CourseRating() {
+  return (
+    <section className="my-5">
+      <div className="flex items-center gap-1 text-2xl font-bold mb-5">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+          alt=""
+          className="w-5 h-5"
+        />
+        <h1>4.3 course rating</h1>
+        <div className="w-2 h-2 bg-slate-600 rounded-full mx-1"></div>
+        <h1>19K ratings</h1>
+      </div>
+      <div className="grid grid-cols-2 gap-6">
+        {dataLocal.map((items) => (
+          <UserComment
+            name={items.name}
+            shortName={items.short_name}
+            time={items.time}
+            content={items.text}
+          ></UserComment>
+        ))}
+      </div>
+      <Button className="font-bold">Show all reviews</Button>
+    </section>
+  );
+}
 export default CourseDetailsPage;
+
+const dataLocal = [
+  {
+    name: "Vishwas M.",
+    short_name: "VM",
+    time: "3 weeks ago",
+    text: `This course was put together a long time ago and I would expect the author's team to notify changes in the codes (in some way) to newer learners. I personally had to spend a lot of time finding the right syntax/codes, and would appreciate a heads-up (displaying the year a particular course was designed) before enrolling for it.`,
+  },
+  {
+    name: "Eugene B.",
+    short_name: "EB",
+    time: "a weeks ago",
+    text: `This was a great intro for Python and Machine learning. After finishing the course I really appreciate him providing discounts, as well as the links to his notes whether we would like to self study or not! It really makes it feel like he cares for our learning`,
+  },
+  {
+    name: "Hsuan-Wen C.",
+    short_name: "HC",
+    time: "a weeks ago",
+    text: `Jose is an excellent instructor. He broke down complex concepts to easy to understand explanations. However, I think there are two things this course can be improved:
+    1) Update the content to reflect Python 3
+    2) Include a final project requirement for students to get hands-on experience`,
+  },
+  {
+    name: "Khotibul U.",
+    short_name: "KU",
+    time: "two weeks ago",
+    text: `Good course, i finished this course and every lecturer that i learned is understandable and feel so easy to do, hopefully this course help me up to reach my goal on data analyst`,
+  },
+];

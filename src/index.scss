@@ -76,6 +76,13 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+.course-rating {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
 .course-instructer {
   overflow: hidden;
   text-overflow: ellipsis;
