@@ -13,6 +13,7 @@ import TitleWithDots from "../components/others/TitleWithDots";
 import CourseDescription from "../components/course/CourseDescription";
 import StudentsAlsoBought from "../components/layout/StudentsAlsoBought";
 import FrequentlyBoughtTogether from "../components/layout/FrequentlyBoughtTogether";
+import CourseDetailsIntructor from "../components/layout/CourseDetailsIntructor";
 
 const CourseDetailsPage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -64,6 +65,7 @@ function Left() {
       <CourseDescription></CourseDescription>
       <StudentsAlsoBought></StudentsAlsoBought>
       <FrequentlyBoughtTogether></FrequentlyBoughtTogether>
+      <CourseDetailsIntructor></CourseDetailsIntructor>
     </Fragment>
   );
 }
