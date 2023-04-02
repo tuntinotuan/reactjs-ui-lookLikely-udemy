@@ -11,6 +11,8 @@ import CompaniesOffer from "../components/layout/CompaniesOffer";
 import CourseContent from "../components/course/CourseContent";
 import TitleWithDots from "../components/others/TitleWithDots";
 import CourseDescription from "../components/course/CourseDescription";
+import StudentsAlsoBought from "../components/layout/StudentsAlsoBought";
+import FrequentlyBoughtTogether from "../components/layout/FrequentlyBoughtTogether";
 
 const CourseDetailsPage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -60,6 +62,8 @@ function Left() {
       <CourseContent></CourseContent>
       <TitleWithDots></TitleWithDots>
       <CourseDescription></CourseDescription>
+      <StudentsAlsoBought></StudentsAlsoBought>
+      <FrequentlyBoughtTogether></FrequentlyBoughtTogether>
     </Fragment>
   );
 }

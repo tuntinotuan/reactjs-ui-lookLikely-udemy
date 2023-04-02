@@ -50,7 +50,7 @@ const AllCourses = () => {
                 bestSeller={items.best_seller}
                 styleBanner
                 borderBottom
-                adjustParent="relative p-3"
+                adjustParent="relative p-3 gap-5"
                 adjustImg
                 adjustPrice="flex-col right-0 top-0 bottom-none"
                 adjustFontSize
@@ -74,7 +74,7 @@ const AllCourses = () => {
                 bestSeller={items.best_seller}
                 styleBanner
                 borderBottom
-                adjustParent="relative p-3"
+                adjustParent="relative p-3 gap-5"
                 adjustImg
                 adjustPrice="flex-col right-0 top-0 bottom-none"
                 adjustFontSize
