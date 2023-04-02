@@ -16,6 +16,8 @@ import FrequentlyBoughtTogether from "../components/layout/FrequentlyBoughtToget
 import CourseDetailsInstructor from "../components/layout/CourseDetailsInstructor";
 import UserComment from "../components/others/UserComment";
 import Button from "../components/button/Button";
+import CourseCard from "../components/course/CourseCard";
+import { dataViewingStudents } from "../data/dataConfig";
 
 const CourseDetailsPage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -69,6 +71,7 @@ function Left() {
       <FrequentlyBoughtTogether></FrequentlyBoughtTogether>
       <CourseDetailsInstructor></CourseDetailsInstructor>
       <CourseRating></CourseRating>
+      <MoreCourses></MoreCourses>
     </Fragment>
   );
 }
@@ -103,6 +106,38 @@ function CourseRating() {
         ))}
       </div>
       <Button className="font-bold">Show all reviews</Button>
+    </section>
+  );
+}
+function MoreCourses() {
+  return (
+    <section>
+      <div className="flex items-center gap-1">
+        <h1 className="text-2xl font-bold">More Courses by</h1>
+        <h1 className="text-2xl font-bold text-contribute hover:text-purple-700 cursor-pointer">
+          Jose Portilla
+        </h1>
+      </div>
+      <div className="grid grid-cols-3 gap-4 py-5 border border-transparent border-b-slate-200 mb-4">
+        {dataViewingStudents.slice(6, 9).map((items) => (
+          <CourseCard
+            img={items.img_course}
+            title={items.title}
+            instructer={items.instructor}
+            rate={items.rate}
+            reviewing={items.reviewing}
+            currentPrice={items.current_price}
+            oldPrice={items.original_price}
+            bestSeller={items.best_seller}
+            adjustImg
+            adjustFontSize="text-[15px]"
+            // hotNew
+          ></CourseCard>
+        ))}
+      </div>
+      <Button className="font-bold" full>
+        Report abuse
+      </Button>
     </section>
   );
 }

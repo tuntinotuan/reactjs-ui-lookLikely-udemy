@@ -25,7 +25,7 @@ const CourseCard = ({
   key,
 }) => {
   const navigate = useNavigate();
-  const consult = reviewing.replace("(", "").replace(")", "");
+  const consult = reviewing?.replace("(", "").replace(")", "");
   return (
     <div
       className={`${styleBanner ? "flex items-start" : ""} ${
