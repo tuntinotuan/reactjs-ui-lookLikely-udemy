@@ -11,8 +11,8 @@ const SwiperNavButtons = ({
     <div className="swiper-nav-btns">
       <button
         onClick={() => swiper.slidePrev(1000)}
-        className={`flex justify-center items-center absolute left-5 ${
-          positionLeftBtn ? positionLeftBtn : "top-[180px]"
+        className={`flex justify-center items-center absolute ${
+          positionLeftBtn ? positionLeftBtn : "left-5 top-[180px]"
         }  ${
           sizeButton ? sizeButton : "w-10 h-10"
         } bg-black rounded-full shadow-2xl hover:bg-slate-700 transition-all`}
@@ -35,8 +35,8 @@ const SwiperNavButtons = ({
       </button>
       <button
         onClick={() => swiper.slideNext(1000)}
-        className={`flex justify-center items-center absolute right-5 ${
-          positionRightBtn ? positionRightBtn : "top-[180px]"
+        className={`flex justify-center items-center absolute ${
+          positionRightBtn ? positionRightBtn : "right-5 top-[180px]"
         }  ${
           sizeButton ? sizeButton : "w-10 h-10"
         } bg-black rounded-full shadow-md hover:bg-slate-700 transition-all`}

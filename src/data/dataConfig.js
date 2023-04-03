@@ -628,3 +628,59 @@ export const dataFeaturedTeacher = [
     career_teacher: "Leadership, Communication",
   },
 ];
+export const dataPupularInstructors = [
+  {
+    avatar_instructor:
+      "https://img-b.udemycdn.com/user/75x75/31334738_a13c_3.jpg",
+    name_instructor: "Dr. Angela Yu",
+    traing: "Python, Data Science",
+    rate: "4.7",
+    amount_students: "1,993,809",
+    amount_courses: 8,
+  },
+  {
+    avatar_instructor:
+      "https://img-b.udemycdn.com/user/75x75/31926668_94e7_6.jpg",
+    name_instructor: "Academind by Maximilian Schwarzmüller",
+    traing: "React JS, React Hooks",
+    rate: "4.6",
+    amount_students: "2,402,457",
+    amount_courses: 44,
+  },
+  {
+    avatar_instructor:
+      "https://img-b.udemycdn.com/user/75x75/9685726_67e7_4.jpg",
+    name_instructor: "Jose Portilla",
+    traing: "Python, Data Science",
+    rate: "4.6",
+    amount_students: "3,295,839",
+    amount_courses: 60,
+  },
+  {
+    avatar_instructor:
+      "https://img-b.udemycdn.com/user/75x75/38516954_b11c_3.jpg",
+    name_instructor: "Andrei Neagoie",
+    traing: "Python, Machine Learning",
+    rate: "4.6",
+    amount_students: "998,328",
+    amount_courses: 26,
+  },
+  {
+    avatar_instructor:
+      "https://img-b.udemycdn.com/user/75x75/4466306_6fd8_3.jpg",
+    name_instructor: "Colt Steele",
+    traing: "Web Development, MySQL",
+    rate: "4.7",
+    amount_students: "1,466,929",
+    amount_courses: 23,
+  },
+  {
+    avatar_instructor:
+      "https://img-b.udemycdn.com/user/75x75/7799204_2091_5.jpg",
+    name_instructor: "Jonas Schmedtmann",
+    traing: "JavaScript, CSS",
+    rate: "4.7",
+    amount_students: "1,640,874",
+    amount_courses: 6,
+  },
+];

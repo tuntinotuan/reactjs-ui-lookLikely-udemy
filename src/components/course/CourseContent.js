@@ -43,7 +43,7 @@ const CourseContent = () => {
               Intro to Course and Python
             </h2>
           </div>
-          <span className="">2 lectures • 7 min</span>
+          <span className="text-[13px] text-slate-600">2 lectures • 7 min</span>
         </div>
         {toggle && (
           <div className="flex flex-col gap-4 p-5">
@@ -87,7 +87,7 @@ const CourseContent = () => {
                 <p className="text-contribute underline cursor-pointer">
                   Preview
                 </p>
-                <span>03:52</span>
+                <span className="opacity-70">03:52</span>
               </div>
             </div>
             <div className="flex items-center justify-between">
@@ -106,10 +106,10 @@ const CourseContent = () => {
                     d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
                   />
                 </svg>
-                <p>Course FAQs</p>
+                <p className="opacity-90">Course FAQs</p>
               </div>
               <div className="flex items-center gap-10">
-                <span>03:12</span>
+                <span className="opacity-70">03:12</span>
               </div>
             </div>
           </div>
@@ -132,11 +132,11 @@ const CourseContent = () => {
                 d="M19.5 8.25l-7.5 7.5-7.5-7.5"
               />
             </svg>
-            <h2 className="text-[15px] font-bold">
-              Intro to Course and Python
-            </h2>
+            <h2 className="text-[15px] font-bold">Setup</h2>
           </div>
-          <span className="">2 lectures • 7 min</span>
+          <span className="text-[13px] text-slate-600">
+            3 lectures • 33 min
+          </span>
         </div>
         <div className="flex-col gap-4 p-5 hidden">
           <div className="flex items-center justify-between">

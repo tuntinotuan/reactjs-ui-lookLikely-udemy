@@ -102,6 +102,9 @@
 .slide-teacher .swiper {
   padding: 0 40px;
 }
+.banner-customer .swiper{
+  padding: 0 30px;
+}
 // ================================
 #app {
   height: 100%;
@@ -164,7 +167,7 @@ body {
 //   background-position: center;
 //   z-index: 50;
 // }
-
+.banner-customer .swiper-button-next,
 .course-list .swiper-button-next,
 .slide-teacher .swiper-button-next {
   background-image: url(https://cdn-icons-png.flaticon.com/512/318/318476.png);
@@ -176,10 +179,12 @@ body {
   z-index: 999;
   filter: blur(0.7px);
 }
+.banner-customer .swiper-button-next::after,
 .course-list .swiper-button-next::after,
 .slide-teacher .swiper-button-next::after{
   display: none;
 }
+.banner-customer .swiper-button-prev,
 .slide-teacher .swiper-button-prev {
   // background-image: url(https://cdn-icons-png.flaticon.com/512/2609/2609370.png);
   background-image: url(https://cdn-icons-png.flaticon.com/512/318/318477.png);
@@ -191,10 +196,12 @@ body {
   z-index: 999;
   filter: blur(0.7px);
 }
+.banner-customer .swiper-button-prev::after,
 .slide-teacher .swiper-button-prev::after{
   display: none;
 }
-
+.banner-customer .swiper-button-next.swiper-button-disabled,
+.banner-customer .swiper-button-prev.swiper-button-disabled,
 .course-list .swiper-button-next.swiper-button-disabled,
 .slide-teacher .swiper-button-next.swiper-button-disabled, 
 .slide-teacher .swiper-button-prev.swiper-button-disabled {

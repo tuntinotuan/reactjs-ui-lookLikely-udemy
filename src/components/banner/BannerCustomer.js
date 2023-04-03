@@ -10,13 +10,15 @@ import { dataCustomerStories } from "../../data/dataConfig";
 
 const BannerCustomer = () => {
   return (
-    <section className="banner h-[350px] max-w-[840px] mx-auto">
+    <section className="banner-customer h-[350px] max-w-[900px] mx-auto">
       <Swiper
         cssMode={true}
         grabCursor="true"
         slidesPerView={"auto"}
-        // modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+        navigation={true}
+        modules={[Autoplay, Navigation]}
         // autoplay={true}
+        autoplay={{ delay: 3000 }}
       >
         {dataCustomerStories &&
           dataCustomerStories.map((items) => (
@@ -30,12 +32,12 @@ const BannerCustomer = () => {
               ></BannerItem>
             </SwiperSlide>
           ))}
-        <SwiperNavButtons
-          positionLeftBtn="bottom-[70px]"
-          positionRightBtn="bottom-[70px]"
+        {/* <SwiperNavButtons
+          positionLeftBtn="left-5 bottom-[70px]"
+          positionRightBtn="right-5 bottom-[70px]"
           // sizeButton="w-12 h-12"
           // positionLeftBtn="left-[-10px] bottom-[20px]"
-        ></SwiperNavButtons>
+        ></SwiperNavButtons> */}
       </Swiper>
     </section>
   );

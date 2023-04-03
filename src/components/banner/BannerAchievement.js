@@ -27,11 +27,11 @@ const BannerAchievement = () => {
               ></BannerItem>
             </SwiperSlide>
           ))}
-        <SwiperNavButtons
+        {/* <SwiperNavButtons
           positionLeftBtn="left-1 bottom-1"
           positionRightBtn="right-1 bottom-1"
           sizeButton="w-8 h-8"
-        ></SwiperNavButtons>
+        ></SwiperNavButtons> */}
       </Swiper>
     </section>
   );

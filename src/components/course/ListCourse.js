@@ -25,7 +25,7 @@ const ListCourse = ({
         // slidesPerView={"auto"}
         grabCursor={"true"}
         spaceBetween={40}
-        navigation={true}
+        // navigation={true}
         modules={[Autoplay, Navigation]}
         autoplay={autoPlay}
       >
@@ -46,11 +46,11 @@ const ListCourse = ({
               ></CourseCard>
             </SwiperSlide>
           ))}
-        {/* <SwiperNavButtons
-          positionLeftBtn={`${top}`}
-          positionRightBtn={`${top}`}
+        <SwiperNavButtons
+          positionLeftBtn={`left-2 ${top}`}
+          positionRightBtn={`right-2 ${top}`}
           sizeButton="w-12 h-12"
-        ></SwiperNavButtons> */}
+        ></SwiperNavButtons>
       </Swiper>
       {/* <SwiperNavButtons positionLeftBtn="left-[-100px] top-[50px]"></SwiperNavButtons> */}
     </div>
