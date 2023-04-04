@@ -27,9 +27,10 @@ const StudentsAlsoBought = () => {
                 styleBanner
                 borderBottom
                 adjustParent="relative py-3 gap-3"
-                adjustImg="h-[66px] w-[66px]"
+                adjustImg="h-[62px] w-[62px]"
                 adjustPrice="flex-col right-16 top-0"
                 adjustFontSize="max-w-[260px]"
+                textReviewing="text-[16px]"
                 positionRate="absolute top-0 right-1/4 gap-6 mr-5"
                 oneStart={1}
                 heart
@@ -55,6 +56,7 @@ const StudentsAlsoBought = () => {
                   adjustImg="h-[66px] w-[66px]"
                   adjustPrice="flex-col right-16 top-0"
                   adjustFontSize="max-w-[260px]"
+                  textReviewing="text-lg"
                   positionRate="absolute top-0 right-1/4 gap-6 mr-5"
                   oneStart={1}
                   heart

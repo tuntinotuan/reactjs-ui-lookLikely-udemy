@@ -15,7 +15,7 @@ const CoursesPage = () => {
       <CoursesStarted></CoursesStarted>
       <Facts></Facts>
       <FeaturedCourses></FeaturedCourses>
-      <PopularTopics></PopularTopics>
+      {/* <PopularTopics></PopularTopics> */}
       <PopularInstructors></PopularInstructors>
       <AllCourses></AllCourses>
       <ChooseCompanies></ChooseCompanies>
