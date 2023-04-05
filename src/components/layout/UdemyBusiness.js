@@ -1,10 +1,13 @@
 import React from "react";
 import Button from "../button/Button";
 
-const UdemyBusiness = () => {
+const UdemyBusiness = ({
+  table = "grid grid-cols-2 gap-24",
+  image = false,
+}) => {
   return (
-    <section className="pt-20 pb-36">
-      <div className="udemy-business grid grid-cols-2 gap-24 h-[350px] max-w-[900px] mx-auto">
+    <section className="page-container pt-20 h-full pb-36">
+      <div className={`udemy-business ${table} max-w-[900px] mx-auto`}>
         <div className="">
           <img
             src="https://www.udemy.com/staticx/udemy/images/v7/logo-ub.svg"
@@ -41,15 +44,15 @@ const UdemyBusiness = () => {
           </Button>
           <Button className="ml-2 font-bold">Learn more</Button>
         </div>
-        <div className="">
+        <div className={`${image}`}>
           <img
             src="https://s.udemycdn.com/home/non-student-cta/UB_Promo_800x800.jpg"
             alt=""
-            className="w-full h-full"
+            className="w-full h-full object-cover"
           />
         </div>
       </div>
-      <div className="udemy-business grid grid-cols-2 gap-24 h-[350px] max-w-[900px] mx-auto mt-24">
+      <div className={`udemy-business ${table} max-w-[900px] mx-auto mt-24`}>
         <div className="order-last flex flex-col justify-center items-start">
           <h1 className="text-3xl font-bold mb-5">Become an instructor</h1>
           <p className="text-lg">
@@ -60,7 +63,7 @@ const UdemyBusiness = () => {
             Start teaching today
           </Button>
         </div>
-        <div className="">
+        <div className={`${image}`}>
           <img
             src="https://s.udemycdn.com/home/non-student-cta/instructor-1x-v3.jpg"
             alt=""

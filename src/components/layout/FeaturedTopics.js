@@ -2,10 +2,10 @@ import React from "react";
 import { dataFeaturedTopics } from "../../data/dataConfig";
 import Button from "../button/Button";
 
-const FeaturedTopics = () => {
+const FeaturedTopics = ({ table }) => {
   return (
     <section className="bg-slate-100 py-16">
-      <div className="page-container">
+      <div className={`page-container ${table}`}>
         <h1 className="text-2xl font-bold mb-5">Featured topics by category</h1>
         <div className="grid grid-cols-4 gap-20">
           {dataFeaturedTopics &&

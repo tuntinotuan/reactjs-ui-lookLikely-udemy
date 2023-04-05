@@ -6,9 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Banner = () => {
+const Banner = ({ heightBanner = "h-[400px]", btnLeft, btnRight }) => {
   return (
-    <section className="banner h-[400px] max-w-[1360px] mx-auto mb-20">
+    <section className={`banner ${heightBanner} max-w-[1360px] mx-auto mb-20`}>
       <Swiper
         // slidesPerView={2}
         cssMode={true}
@@ -33,7 +33,10 @@ const Banner = () => {
         <SwiperSlide>
           <BannerItem image="https://img-b.udemycdn.com/notices/web_carousel_slide/image/4d5387e2-04db-4085-bfa3-7a005d2b2da8.jpg"></BannerItem>
         </SwiperSlide>
-        <SwiperNavButtons></SwiperNavButtons>
+        <SwiperNavButtons
+          positionLeftBtn={btnLeft}
+          positionRightBtn={btnRight}
+        ></SwiperNavButtons>
       </Swiper>
     </section>
   );

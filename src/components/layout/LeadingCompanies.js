@@ -1,9 +1,9 @@
 import React from "react";
 import LogoCompanies from "../others/LogoCompanies";
 
-const LeadingCompanies = () => {
+const LeadingCompanies = ({ table = "px-1" }) => {
   return (
-    <section className="page-container text-center py-20 px-1">
+    <section className={`page-container text-center py-20 ${table}`}>
       <h1 className="text-2xl font-bold mb-2">
         Trusted by over 13,400 great teams
       </h1>

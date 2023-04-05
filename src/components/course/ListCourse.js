@@ -12,6 +12,7 @@ const ListCourse = ({
   convertCard = false,
   top = "top-[50px]",
   autoPlay = false,
+  items = 5,
 }) => {
   return (
     <div
@@ -21,7 +22,7 @@ const ListCourse = ({
     >
       <Swiper
         cssMode={true}
-        slidesPerView={convertCard ? "auto" : 5}
+        slidesPerView={convertCard ? "auto" : items}
         // slidesPerView={"auto"}
         grabCursor={"true"}
         spaceBetween={40}

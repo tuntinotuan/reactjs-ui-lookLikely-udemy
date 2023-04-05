@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
-const Search = () => {
+const Search = ({ width = "w-[562px]" }) => {
   const [filter, setFilter] = useState("");
   const handleChangeInput = (e) => {
     setFilter(e.target.value);
   };
   return (
-    <div className="flex items-center w-[562px] h-[48px] border border-slate-900 rounded-full bg-slate-50 px-3 py-2">
+    <div
+      className={`flex items-center ${width} h-[48px] border border-slate-900 rounded-full bg-slate-50 px-3 py-2`}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
