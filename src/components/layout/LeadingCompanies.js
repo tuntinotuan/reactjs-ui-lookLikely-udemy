@@ -1,9 +1,11 @@
 import React from "react";
 import LogoCompanies from "../others/LogoCompanies";
 
-const LeadingCompanies = ({ table = "px-1" }) => {
+const LeadingCompanies = ({ table = "px-1", grid }) => {
   return (
-    <section className={`page-container text-center py-20 ${table}`}>
+    <section
+      className={`page-container text-center py-20 ${table} overflow-hidden`}
+    >
       <h1 className="text-2xl font-bold mb-2">
         Trusted by over 13,400 great teams
       </h1>
@@ -11,7 +13,7 @@ const LeadingCompanies = ({ table = "px-1" }) => {
         Leading companies use the same courses to help employees keep their
         skills fresh.
       </p>
-      <LogoCompanies between></LogoCompanies>
+      <LogoCompanies between grid={grid}></LogoCompanies>
     </section>
   );
 };

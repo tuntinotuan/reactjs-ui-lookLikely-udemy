@@ -2,12 +2,12 @@ import React from "react";
 import { dataFeaturedTopics } from "../../data/dataConfig";
 import Button from "../button/Button";
 
-const FeaturedTopics = ({ table }) => {
+const FeaturedTopics = ({ table, grid = "grid grid-cols-4 gap-20" }) => {
   return (
-    <section className="bg-slate-100 py-16">
+    <section className="bg-slate-100 py-16 overflow-hidden">
       <div className={`page-container ${table}`}>
         <h1 className="text-2xl font-bold mb-5">Featured topics by category</h1>
-        <div className="grid grid-cols-4 gap-20">
+        <div className={`${grid}`}>
           {dataFeaturedTopics &&
             dataFeaturedTopics.map((items) => (
               <div className="items-featured">

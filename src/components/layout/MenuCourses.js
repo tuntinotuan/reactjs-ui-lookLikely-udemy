@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 
 const MenuCourses = () => {
   return (
@@ -14,10 +15,18 @@ const MenuCourses = () => {
       </div>
       <nav className="px-4">
         <ul className="flex items-center justify-between text-sm text-slate-600 gap-7">
-          <li className="hover:text-purple-700 cursor-pointer">
+          <NavLink
+            to="/courses/development/"
+            className="hover:text-purple-700 cursor-pointer"
+          >
             Web Development
-          </li>
-          <li className="hover:text-purple-700 cursor-pointer">Data Science</li>
+          </NavLink>
+          <NavLink
+            to="/courses/data-science/"
+            className="hover:text-purple-700 cursor-pointer"
+          >
+            Data Science
+          </NavLink>
           <li className="hover:text-purple-700 cursor-pointer">
             Mobile Development
           </li>

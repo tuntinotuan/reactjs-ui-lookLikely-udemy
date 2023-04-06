@@ -8,11 +8,11 @@ import Facts from "../components/others/Facts";
 import PopularTopics from "../components/layout/PopularTopics";
 import PopularInstructors from "../components/layout/PopularInstructors";
 
-const CoursesPage = () => {
+const CoursesPage = ({ data }) => {
   return (
     <Fragment>
       <MenuCourses></MenuCourses>
-      <CoursesStarted></CoursesStarted>
+      <CoursesStarted data={data}></CoursesStarted>
       <Facts></Facts>
       <FeaturedCourses></FeaturedCourses>
       {/* <PopularTopics></PopularTopics> */}

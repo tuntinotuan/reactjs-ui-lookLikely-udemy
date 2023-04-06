@@ -1,11 +1,14 @@
 import React from "react";
 import { dataCompanies } from "../../data/dataConfig";
 
-const LogoCompanies = ({ amount = 6, brightness = false, between = false }) => {
+const LogoCompanies = ({
+  amount = 6,
+  brightness = false,
+  between = false,
+  grid = "flex items-center",
+}) => {
   return (
-    <div
-      className={`flex items-center gap-5 ${between ? "justify-between" : ""}`}
-    >
+    <div className={`${grid} gap-5 ${between ? "justify-between" : ""}`}>
       {dataCompanies &&
         dataCompanies
           .slice(0, amount)

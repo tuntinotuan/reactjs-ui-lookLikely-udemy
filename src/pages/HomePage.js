@@ -9,14 +9,50 @@ import TopCategories from "../components/layout/TopCategories";
 import UdemyBusiness from "../components/layout/UdemyBusiness";
 import ViewingStudents from "../components/layout/ViewingStudents";
 import useViewport from "../hooks/useViewport";
-import { useEffect } from "react";
 
 const HomePage = () => {
   const { width } = useViewport();
+  const isMobileSmaller = width <= 414;
   const isMobile = width >= 415 && width <= 768;
   const isTable = width > 768 && width <= 1024;
+  console.log("isMobileSmaller", isMobileSmaller);
   console.log("isMobile", isMobile);
   console.log("viewPort.width", width);
+  if (isMobileSmaller) {
+    return (
+      <Fragment>
+        <Banner
+          heightBanner="h-[180px]"
+          btnLeft={"top-[70px] left-3"}
+          btnRight={`top-[70px] right-3`}
+          hiddenContent
+        ></Banner>
+        <CoursesSelection
+          table="mx-6"
+          card={2}
+          text="w-auto"
+          hiddenMenu
+        ></CoursesSelection>
+        <GoalsAchieving table={"px-6"}></GoalsAchieving>
+        <ViewingStudents table={"mx-6"} card={2}></ViewingStudents>
+        <TopCategories
+          table={"px-6"}
+          heightImage={"h-auto"}
+          grid="grid grid-cols-3 gap-3"
+        ></TopCategories>
+        <FeaturedTopics table={"px-6"} grid="grid grid-cols-2"></FeaturedTopics>
+        <LeadingCompanies
+          table={"px-6"}
+          grid="grid grid-cols-3"
+        ></LeadingCompanies>
+        <CustomerStories></CustomerStories>
+        <UdemyBusiness
+          table="flex flex-col text-center px-10"
+          image="order-first w-full h-full mb-5"
+        ></UdemyBusiness>
+      </Fragment>
+    );
+  }
   if (isMobile) {
     return (
       <Fragment>

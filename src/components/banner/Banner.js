@@ -6,7 +6,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Banner = ({ heightBanner = "h-[400px]", btnLeft, btnRight }) => {
+const Banner = ({
+  heightBanner = "h-[400px]",
+  btnLeft,
+  btnRight,
+  hiddenContent,
+}) => {
   return (
     <section className={`banner ${heightBanner} max-w-[1360px] mx-auto mb-20`}>
       <Swiper
@@ -25,13 +30,17 @@ const Banner = ({ heightBanner = "h-[400px]", btnLeft, btnRight }) => {
             image="https://img-b.udemycdn.com/notices/home_carousel_slide/image/7c10f728-ee9c-4cf1-8235-15a8a56092ed.jpg"
             title="Learning that lasts"
             content="Invest in yourself. Log in now for special savings on courses. Sale ends March 30."
+            hiddenContent={hiddenContent}
           ></BannerItem>
         </SwiperSlide>
         <SwiperSlide>
-          <BannerItem></BannerItem>
+          <BannerItem hiddenContent={hiddenContent}></BannerItem>
         </SwiperSlide>
         <SwiperSlide>
-          <BannerItem image="https://img-b.udemycdn.com/notices/web_carousel_slide/image/4d5387e2-04db-4085-bfa3-7a005d2b2da8.jpg"></BannerItem>
+          <BannerItem
+            image="https://img-b.udemycdn.com/notices/web_carousel_slide/image/4d5387e2-04db-4085-bfa3-7a005d2b2da8.jpg"
+            hiddenContent={hiddenContent}
+          ></BannerItem>
         </SwiperSlide>
         <SwiperNavButtons
           positionLeftBtn={btnLeft}
@@ -45,6 +54,7 @@ function BannerItem({
   image = "",
   title = "Unlock the power of your people",
   content = "Udemy Business is trusted by 12.5K+ companies around the world.",
+  hiddenContent = false,
 }) {
   // const navigate = useNavigate();
   return (
@@ -59,7 +69,11 @@ function BannerItem({
         alt=""
         className="w-full h-full object-cover"
       />
-      <div className="absolute top-[70px] left-[70px] w-[450px] bg-white p-5 shadow-md">
+      <div
+        className={`absolute top-[70px] left-[70px] w-[450px] bg-white p-5 shadow-md ${
+          hiddenContent ? "hidden" : ""
+        }`}
+      >
         <div className="flex flex-col gap-x-3">
           <h1 className="text-4xl font-bold mb-4">{title}</h1>
           <p className="text-[16px]">

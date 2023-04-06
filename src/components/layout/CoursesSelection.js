@@ -4,15 +4,20 @@ import Button from "../button/Button";
 import ListCourse from "../course/ListCourse";
 import Menu from "./Menu";
 
-const CoursesSelection = ({ table, card, text = "w-[850px]" }) => {
+const CoursesSelection = ({
+  table,
+  card,
+  text = "w-[850px]",
+  hiddenMenu = false,
+}) => {
   return (
-    <section className={`page-container mb-10 ${table}`}>
+    <section className={`page-container mb-10 ${table} overflow-hidden`}>
       <h1 className="text-3xl font-bold mb-4">A broad selection of courses</h1>
-      <p className="text-lg">
+      <p className="text-lg mb-2">
         Choose from 213,000 online video courses with new additions published
         every month
       </p>
-      <Menu></Menu>
+      {!hiddenMenu && <Menu></Menu>}
       <div className="p-8 border border-slate-300 overflow-hidden">
         <h1 className="text-3xl font-bold mb-4">
           Expand your career opportunities with Python

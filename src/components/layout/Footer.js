@@ -2,11 +2,17 @@ import React from "react";
 import Button from "../button/Button";
 import { NavLink } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({
+  mobileSmaller = "flex justify-between items-start",
+  grid = "grid grid-cols-3 gap-32",
+  mobile = "px-12 py-8",
+}) => {
   return (
-    <footer className="flex flex-col justify-between bg-darkudemy w-full px-12 py-8 text-white">
-      <div className="mb-10 flex justify-between items-start">
-        <div className="grid grid-cols-3 gap-32">
+    <footer
+      className={`flex flex-col justify-between bg-darkudemy w-full ${mobile} text-white`}
+    >
+      <div className={`mb-10 ${mobileSmaller}`}>
+        <div className={`${grid}`}>
           <ul>
             <li className="mb-2 hover:underline cursor-pointer">
               Udemy Business

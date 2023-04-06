@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Main from "./components/layout/Main";
 import PageNotFound from "./components/layout/PageNotFound";
+import { dataCourses, dataViewingStudents } from "./data/dataConfig";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const CoursesPage = lazy(() => import("./pages/CoursesPage"));
 const CourseDetailsPage = lazy(() => import("./pages/CourseDetailsPage"));
@@ -27,7 +28,11 @@ function App() {
             ></Route>
             <Route
               path="/courses/development/"
-              element={<CoursesPage></CoursesPage>}
+              element={<CoursesPage data={dataCourses}></CoursesPage>}
+            ></Route>
+            <Route
+              path="/courses/data-science/"
+              element={<CoursesPage data={dataViewingStudents}></CoursesPage>}
             ></Route>
             <Route
               path="/course/learning-python-for-data-analysis-and-visualization/"
