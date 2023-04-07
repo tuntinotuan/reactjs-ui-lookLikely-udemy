@@ -1,11 +1,17 @@
 import React from "react";
 import { dataReasonsStart } from "../../data/dataConfig";
 
-const ReasonsStart = () => {
+const ReasonsStart = ({
+  grid = "grid grid-cols-3 gap-32",
+  paddingParent = "",
+  textSize = "text-4xl",
+}) => {
   return (
-    <section className="page-container text-center my-20">
-      <h1 className="text-4xl font-bold mb-10">So many reasons to start</h1>
-      <div className="grid grid-cols-3 gap-32">
+    <section className={`page-container text-center my-20 ${paddingParent}`}>
+      <h1 className={`${textSize} font-bold mb-10`}>
+        So many reasons to start
+      </h1>
+      <div className={`${grid}`}>
         {dataReasonsStart &&
           dataReasonsStart.map((items) => (
             <div className="flex flex-col items-center p-2">

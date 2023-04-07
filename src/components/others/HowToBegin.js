@@ -1,17 +1,25 @@
 import React from "react";
 import NavigateCourse from "../layout/NavigateCourse";
 
-const HowToBegin = () => {
+const HowToBegin = ({
+  col = "gap-20",
+  padding = "",
+  hiddenNavigate = false,
+}) => {
   return (
-    <section className="page-container flex flex-col justify-center max-w-[960px] items-center my-24">
+    <section
+      className={`page-container flex flex-col justify-center max-w-[960px] items-center my-24 ${padding}`}
+    >
       <h1 className="text-4xl font-bold mb-10">How to begin</h1>
-      <NavigateCourse
-        active="Plan your curriculum"
-        array={["Record your video", "Launch your course"]}
-        textSize="text-xl font-extrabold"
-        gap="gap-12"
-      ></NavigateCourse>
-      <div className="flex gap-20">
+      {!hiddenNavigate && (
+        <NavigateCourse
+          active="Plan your curriculum"
+          array={["Record your video", "Launch your course"]}
+          textSize="text-xl font-extrabold"
+          gap="gap-12"
+        ></NavigateCourse>
+      )}
+      <div className={`flex ${col}`}>
         <div className="flex flex-col items-start justify-center">
           <p className="text-[20px] mb-4">
             You start with your passion and knowledge. Then choose a promising

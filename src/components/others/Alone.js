@@ -1,13 +1,21 @@
 import React from "react";
 
-const Alone = ({ translate = "translate-x-1/3" }) => {
+const Alone = ({
+  translate = "translate-x-1/3",
+  flexBox = "items-center justify-between",
+  hiddenImageRight = false,
+  padding = "",
+  margin = "my-32",
+}) => {
   return (
-    <section className="flex w-full items-center justify-between text-center my-32">
+    <section
+      className={`flex ${flexBox} w-full text-center ${margin} ${padding} overflow-hidden`}
+    >
       <div className="h-full">
         <img
           src="https://s.udemycdn.com/teaching/support-1-v3.jpg"
           alt=""
-          className={`-${translate} -translate-x-1/3`}
+          className={`-${translate}`}
         />
       </div>
       <div className="w-full max-w-[600px] h-auto">
@@ -29,13 +37,15 @@ const Alone = ({ translate = "translate-x-1/3" }) => {
           Need more details before your start? Learn more.
         </a>
       </div>
-      <div className="h-full">
-        <img
-          src="https://s.udemycdn.com/teaching/support-2-v3.jpg"
-          alt=""
-          className={`${translate}`}
-        />
-      </div>
+      {!hiddenImageRight && (
+        <div className="h-full">
+          <img
+            src="https://s.udemycdn.com/teaching/support-2-v3.jpg"
+            alt=""
+            className={`${translate}`}
+          />
+        </div>
+      )}
     </section>
   );
 };

@@ -4,9 +4,14 @@ import { dataFeaturedTeacher } from "../../data/dataConfig";
 import SwiperNavButtons from "../button/SwiperNavButtons";
 import { Autoplay, Navigation } from "swiper";
 
-const SlidesTeacherFeatured = () => {
+const SlidesTeacherFeatured = ({
+  grid,
+  width = "max-w-[900px]",
+  height = "h-[400px]",
+  padding = "",
+}) => {
   return (
-    <section className="slide-teacher h-[400px] max-w-[900px] mx-auto">
+    <section className={`slide-teacher ${width} ${height} mx-auto ${padding}`}>
       <Swiper
         cssMode={true}
         grabCursor="true"
@@ -23,6 +28,7 @@ const SlidesTeacherFeatured = () => {
                 comment={items.comment_teacher}
                 name={items.name_teacher}
                 career={items.career_teacher}
+                grid={grid}
               ></BannerItem>
             </SwiperSlide>
           ))}
@@ -35,9 +41,9 @@ const SlidesTeacherFeatured = () => {
     </section>
   );
 };
-function BannerItem({ img, comment, name, career }) {
+function BannerItem({ img, comment, name, career, grid = "grid grid-cols-2" }) {
   return (
-    <div className="grid grid-cols-2 w-full h-full gap-6 bg-slate-100">
+    <div className={`${grid} w-full h-full gap-6 bg-slate-100`}>
       <img src={img} alt="" className="w-auto h-full" />
       <div className="flex flex-col items-start justify-center">
         <p className="text-2xl mb-5">{comment}</p>
