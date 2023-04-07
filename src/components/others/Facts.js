@@ -1,9 +1,11 @@
 import React from "react";
 
-const Facts = () => {
+const Facts = ({ table }) => {
   return (
     <section className="flex items-center border border-transparent border-y-slate-200 mb-12">
-      <div className="page-container flex items-center justify-between gap-28 py-5">
+      <div
+        className={`"page-container flex items-center justify-between gap-28 py-5 ${table}`}
+      >
         <div className="flex items-center gap-4">
           <div>
             <div className="flex items-center justify-center w-10 h-10 bg-slate-200 rounded-full">

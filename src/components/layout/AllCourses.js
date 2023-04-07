@@ -6,9 +6,18 @@ import ArticleMoneyBack from "../others/ArticleMoneyBack";
 import ShortBy from "../others/ShortBy";
 import CompaniesTrustedUdemy from "./CompaniesTrustedUdemy";
 
-const AllCourses = () => {
+const AllCourses = ({
+  table,
+  imgMobile,
+  priceMobile = "flex-col right-0 top-0 bottom-none",
+  titleTable,
+  hiddenResults = false,
+  mobileSmaller,
+  gridLogo,
+  btnUdemyFull = false,
+}) => {
   return (
-    <section className="page-container mb-10">
+    <section className={`page-container mb-10 ${table}`}>
       <h1 className="text-2xl font-bold mb-4">All Development courses</h1>
       <ArticleMoneyBack></ArticleMoneyBack>
       <div className="flex items-center justify-between w-full my-5">
@@ -32,7 +41,9 @@ const AllCourses = () => {
           </Button>
           <ShortBy></ShortBy>
         </div>
-        <h4 className="text-[16px] font-bold opacity-50">10,000 results</h4>
+        {!hiddenResults && (
+          <h4 className="text-[16px] font-bold opacity-50">10,000 results</h4>
+        )}
       </div>
       <div className="-z-1">
         {dataCourses &&
@@ -52,12 +63,18 @@ const AllCourses = () => {
                 borderBottom
                 adjustParent="relative p-3 gap-5"
                 adjustImg
-                adjustPrice="flex-col right-0 top-0 bottom-none"
+                adjustPrice={priceMobile}
                 adjustFontSize
+                adjustTable={titleTable}
+                adjustMobileSmaller={mobileSmaller}
+                imgMobile={imgMobile}
               ></CourseCard>
             ))}
       </div>
-      <CompaniesTrustedUdemy></CompaniesTrustedUdemy>
+      <CompaniesTrustedUdemy
+        grid={gridLogo}
+        btnFull={btnUdemyFull}
+      ></CompaniesTrustedUdemy>
       <div className="-z-1 border border-transparent border-t-slate-200">
         {dataCourses &&
           dataCourses
@@ -76,8 +93,11 @@ const AllCourses = () => {
                 borderBottom
                 adjustParent="relative p-3 gap-5"
                 adjustImg
-                adjustPrice="flex-col right-0 top-0 bottom-none"
+                adjustPrice={priceMobile}
                 adjustFontSize
+                adjustTable={titleTable}
+                adjustMobileSmaller={mobileSmaller}
+                imgMobile={imgMobile}
               ></CourseCard>
             ))}
       </div>

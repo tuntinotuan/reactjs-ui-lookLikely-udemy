@@ -7,12 +7,16 @@ import "swiper/css/pagination";
 import SwiperNavButtons from "../button/SwiperNavButtons";
 import { dataPupularInstructors } from "../../data/dataConfig";
 
-const PopularInstructors = () => {
+const PopularInstructors = ({
+  table,
+  items = 4,
+  heightItems = "h-[160px]",
+}) => {
   return (
-    <section className="page-container w-full mb-10">
+    <section className={`page-container w-full mb-10 ${table}`}>
       <h1 className="text-2xl font-bold mb-5">Popular Instructors</h1>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={items}
         grabCursor={"true"}
         spaceBetween={10}
         // navigation={true}
@@ -21,14 +25,16 @@ const PopularInstructors = () => {
       >
         {dataPupularInstructors.map((items) => (
           <SwiperSlide>
-            <div className="flex items-start gap-4 h-[160px] border borer-transparent borer-b-slate-200 p-4 hover:bg-slate-100">
+            <div
+              className={`flex items-start gap-4 ${heightItems} border borer-transparent borer-b-slate-200 p-4 hover:bg-slate-100`}
+            >
               <img
                 src={items.avatar_instructor}
                 alt=""
                 className="w-16 h-16 rounded-full border border-slate-200"
               />
               <div>
-                <h2 className="text-[16px] font-bold">
+                <h2 className="popular-instructor text-[16px] font-bold">
                   {items.name_instructor}
                 </h2>
                 <p className="text-sm text-slate-800">{items.traing}</p>

@@ -169,9 +169,9 @@ const Header = ({
                 English
               </Button>
             </div>
-            <div 
-            className="absolute top-5 left-[280px] flex items-center justify-center w-10 h-10 bg-white rounded-full" 
-            onClick={() => setShow(false)}
+            <div
+              className="absolute top-5 left-[280px] flex items-center justify-center w-10 h-10 bg-white rounded-full"
+              onClick={() => setShow(false)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -199,12 +199,12 @@ const Header = ({
         />
       </NavLink>
       {!hiddenMultiple && (
-        <div className="py-[24px] cursor-pointer " ref={nodeRefCategories}>
+        <div className="py-[24px] cursor-pointer" ref={nodeRefCategories}>
           <p className="hover:text-purple-700">Categories</p>
           {hoverCategories && (
             <div className="absolute left-32 top-[100%] bg-transparent  shadow-xl">
               <div className="flex bg-white border border-slate-200 mt-1">
-                <ul className="w-[250px] h-screen">
+                <ul className="w-[250px] h-[500px]">
                   <NavLink
                     to="/courses/development/"
                     className="flex items-center justify-between cursor-pointer px-4 py-2 hover:text-purple-700"

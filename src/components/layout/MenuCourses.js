@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 
-const MenuCourses = () => {
+const MenuCourses = ({ hidden = false }) => {
   return (
     <div className="flex items-center justify-between w-full h-12 bg-white border border-t-slate-200 shadow-md px-10 mb-12">
       <div className="flex items-center h-full overflow-hidden gap-3">
@@ -36,12 +36,16 @@ const MenuCourses = () => {
           <li className="hover:text-purple-700 cursor-pointer">
             Game Development
           </li>
-          <li className="hover:text-purple-700 cursor-pointer">
-            Database Design & Development
-          </li>
-          <li className="hover:text-purple-700 cursor-pointer">
-            Software Testing
-          </li>
+          {!hidden && (
+            <li className="hover:text-purple-700 cursor-pointer">
+              Database Design & Development
+            </li>
+          )}
+          {!hidden && (
+            <li className="hover:text-purple-700 cursor-pointer">
+              Software Testing
+            </li>
+          )}
         </ul>
       </nav>
       <div className="cursor-pointer">

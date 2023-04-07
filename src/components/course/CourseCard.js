@@ -17,8 +17,11 @@ const CourseCard = ({
   borderBottom = false,
   adjustParent = "gap-7",
   adjustImg = "",
+  imgMobile = false,
   adjustPrice = false,
   adjustFontSize = false,
+  adjustTable = false,
+  adjustMobileSmaller = false,
   positionRate = "",
   oneStart = 4,
   heart = false,
@@ -29,7 +32,13 @@ const CourseCard = ({
   const consult = reviewing?.replace("(", "").replace(")", "");
   return (
     <div
-      className={`${styleBanner ? "flex items-start" : ""} ${
+      className={`${
+        styleBanner
+          ? adjustMobileSmaller
+            ? adjustMobileSmaller
+            : "flex items-start"
+          : ""
+      } ${
         borderBottom ? "border border-transparent border-b-slate-200" : ""
       } course-card h-full select-none -z-1 cursor-pointer ${adjustParent}`}
       key={key}
@@ -46,7 +55,11 @@ const CourseCard = ({
           src={img}
           alt=""
           className={`${
-            styleBanner ? `flex-1 ${adjustImg ? "h-[auto]" : "h-[260px]"}` : ""
+            styleBanner
+              ? `flex-1 ${
+                  adjustImg ? (imgMobile ? imgMobile : "h-[auto]") : "h-[260px]"
+                }`
+              : ""
           } w-full object-cover ${adjustImg}`}
         />
       </div>
@@ -60,7 +73,7 @@ const CourseCard = ({
             styleBanner && !adjustFontSize
               ? "text-2xl max-w-[450px]"
               : "text-[16px]"
-          } course-title font-bold mb-2 ${adjustFontSize}`}
+          } course-title font-bold mb-2 ${adjustTable} ${adjustFontSize}`}
         >
           {title}
         </h3>
@@ -108,9 +121,10 @@ const CourseCard = ({
         <div
           className={`${
             styleBanner
-              ? `${
-                  adjustFontSize ? "text-[16px]" : "text-xl"
-                } mt-auto absolute bottom-0`
+              ? `${adjustFontSize ? "text-[16px]" : "text-xl"} mt-auto ${
+                  !adjustMobileSmaller &&
+                  `${adjustPrice && "absolute bottom-0"}`
+                }`
               : ""
           } flex items-center text-[16px] gap-2 mb-2 ${adjustPrice}`}
         >
