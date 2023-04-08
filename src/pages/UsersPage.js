@@ -3,8 +3,44 @@ import Button from "../components/button/Button";
 import CourseCard from "../components/course/CourseCard";
 import ChooseCompanies from "../components/layout/ChooseCompanies";
 import { dataUsers } from "../data/dataConfig";
+import useViewport from "../hooks/useViewport";
 
 const UsersPage = () => {
+  const { width } = useViewport();
+  const isMobileSmaller = width <= 414;
+  const isMobile = width >= 415 && width <= 768;
+  const isTable = width > 768 && width <= 1024;
+
+  if (isMobileSmaller) {
+    return (
+      <Fragment>
+        <Container
+          grid="flex flex-col-reverse gap-5"
+          padding="px-5"
+          LeftGridItems="grid-cols-1"
+          LeftWFull
+          RightBtnWFull
+        ></Container>
+        <ChooseCompanies col gridLogo="grid grid-cols-3"></ChooseCompanies>
+      </Fragment>
+    );
+  }
+  if (isMobile) {
+    return (
+      <Fragment>
+        <Container padding="px-5"></Container>
+        <ChooseCompanies col></ChooseCompanies>
+      </Fragment>
+    );
+  }
+  if (isTable) {
+    return (
+      <Fragment>
+        <Container></Container>
+        <ChooseCompanies col></ChooseCompanies>
+      </Fragment>
+    );
+  }
   return (
     <Fragment>
       <Container></Container>
@@ -13,19 +49,27 @@ const UsersPage = () => {
   );
 };
 
-function Container() {
+function Container({
+  grid = "flex justify-between gap-16",
+  padding = "",
+  LeftWFull = false,
+  RightBtnWFull = false,
+  LeftGridItems,
+}) {
   return (
-    <section className="flex justify-between gap-16 page-container w-full max-w-[860px] mt-12 mb-20">
-      <Left></Left>
-      <Right></Right>
+    <section
+      className={`${grid} page-container w-full max-w-[860px] mt-12 mb-20 ${padding} overflow-hidden`}
+    >
+      <Left wFull={LeftWFull} gridItems={LeftGridItems}></Left>
+      <Right wFull={RightBtnWFull}></Right>
     </section>
   );
 }
-function Left() {
+function Left({ wFull, gridItems = "grid-cols-2" }) {
   return (
     <Fragment>
       {dataUsers.map((items) => (
-        <section className="w-4/5">
+        <section className={`${wFull ? "w-full" : "w-4/5"}`}>
           <h3 className="font-bold opacity-50">INSTRUCTOR</h3>
           <h1 className="text-4xl font-bold">{items.name_user}</h1>
           <h4 className="font-bold my-3">{items.instructor}</h4>
@@ -55,7 +99,7 @@ function Left() {
             </p>
           ))}
           <h2 className="text-xl font-bold my-4">{`My courses (${items?.my_courses.length})`}</h2>
-          <div className="grid grid-cols-2 gap-5">
+          <div className={`grid ${gridItems} gap-5`}>
             {items?.my_courses.slice(0, 9).map((items) => (
               <CourseCard
                 img={items.img_course}
@@ -76,7 +120,7 @@ function Left() {
     </Fragment>
   );
 }
-function Right() {
+function Right({ wFull = false }) {
   const openNewTab = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -93,6 +137,7 @@ function Right() {
             onClick={() => openNewTab(items.link_website)}
             className="flex items-center justify-center gap-1 w-[200px] mb-2"
             square="py-3"
+            full={wFull}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -114,6 +159,7 @@ function Right() {
             onClick={() => openNewTab(items.link_twitter)}
             className="flex items-center justify-center gap-1 w-[200px] mb-2"
             square="py-3"
+            full={wFull}
           >
             <svg
               className="w-4 h-4"
@@ -128,6 +174,7 @@ function Right() {
             onClick={() => openNewTab(items.link_linkedin)}
             className="flex items-center justify-center gap-1 w-[200px]"
             square="py-3"
+            full={wFull}
           >
             <svg
               className="w-4 h-4 rounded-md"
