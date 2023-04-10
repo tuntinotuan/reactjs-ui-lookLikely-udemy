@@ -1,7 +1,6 @@
 import React from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
-import { Autoplay, Keyboard, Mousewheel, Navigation, Pagination } from "swiper";
-import SwiperNavButtons from "../button/SwiperNavButtons";
+import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

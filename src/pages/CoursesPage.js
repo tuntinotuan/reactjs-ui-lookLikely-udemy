@@ -5,7 +5,6 @@ import CoursesStarted from "../components/layout/CoursesStarted";
 import FeaturedCourses from "../components/layout/FeaturedCourses";
 import MenuCourses from "../components/layout/MenuCourses";
 import Facts from "../components/others/Facts";
-import PopularTopics from "../components/layout/PopularTopics";
 import PopularInstructors from "../components/layout/PopularInstructors";
 import useViewport from "../hooks/useViewport";
 

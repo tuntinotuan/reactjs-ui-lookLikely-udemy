@@ -1,7 +1,6 @@
 import React from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { dataFeaturedTeacher } from "../../data/dataConfig";
-import SwiperNavButtons from "../button/SwiperNavButtons";
 import { Autoplay, Navigation } from "swiper";
 
 const SlidesTeacherFeatured = ({

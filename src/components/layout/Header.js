@@ -2,9 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../button/Button";
 import Search from "../search/Search";
-import { useState } from "react";
 import useHover from "../../hooks/useHover";
 import useClickOutSide from "../../hooks/useClickOutSide";
+import SearchMobile from "../search/SearchMobile";
 
 const Header = ({
   hiddenMultiple = false,
@@ -14,20 +14,17 @@ const Header = ({
   widthSearch,
 }) => {
   const { show, setShow, nodeRef } = useClickOutSide();
-  const {
-    show: showSearch,
-    setShow: setShowSearch,
-    nodeRef: nodeRefSearch,
-  } = useClickOutSide();
+  const { show: showSearchMobile, setShow: setShowSearchMobile } =
+    useClickOutSide();
   const { hovered, nodeRef: nodeRefHover } = useHover();
   const { hovered: hoverCategories, nodeRef: nodeRefCategories } = useHover();
-  const [cart, setCart] = useState(false);
-  const handleHover = () => {
-    setCart(true);
-  };
-  const handleUnHover = () => {
-    setCart(false);
-  };
+  // const [cart, setCart] = useState(false);
+  // const handleHover = () => {
+  //   setCart(true);
+  // };
+  // const handleUnHover = () => {
+  //   setCart(false);
+  // };
   return (
     <header
       className={`header relative flex items-center ${
@@ -357,40 +354,12 @@ const Header = ({
           Teach on Udemy
         </NavLink>
       )}
-      {showSearch && (
-        <div className="fixed inset-0 bg-white">
-          <div className="flex items-center shadow-md">
-            <Search
-              width="w-full"
-              bgColor="bg-white"
-              borderNone
-              rounded=""
-            ></Search>
-            <div
-              className="flex items-center justify-center w-16 h-10 bg-white rounded-full"
-              onClick={() => setShowSearch(false)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
+      {showSearchMobile && (
+        <SearchMobile onClick={() => setShowSearchMobile(false)}></SearchMobile>
       )}
       <div className="flex items-center gap-5">
         {btnMenu && (
-          <div onClick={() => setShowSearch(true)}>
+          <div onClick={() => setShowSearchMobile(true)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
