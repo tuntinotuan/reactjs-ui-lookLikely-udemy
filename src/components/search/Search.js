@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 
-const Search = ({ width = "w-[562px]" }) => {
+const Search = ({
+  width = "w-[562px]",
+  bgColor = "bg-slate-50",
+  borderNone = false,
+  rounded = "rounded-full",
+}) => {
   const [filter, setFilter] = useState("");
   const handleChangeInput = (e) => {
     setFilter(e.target.value);
   };
   return (
     <div
-      className={`flex items-center ${width} h-[48px] border border-slate-900 rounded-full bg-slate-50 px-3 py-2`}
+      className={`flex items-center ${width} h-[48px] ${
+        borderNone ? "" : "border border-slate-900"
+      } ${rounded} ${bgColor} px-3 py-2`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +37,7 @@ const Search = ({ width = "w-[562px]" }) => {
       <input
         type="text"
         placeholder="Search for anything"
-        className={`w-full h-full px-4 text-slate-900 bg-slate-50 outline-none`}
+        className={`w-full h-full px-4 text-slate-900 ${bgColor} outline-none`}
         onChange={handleChangeInput}
       />
     </div>

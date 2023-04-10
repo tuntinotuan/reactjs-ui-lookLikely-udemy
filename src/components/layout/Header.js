@@ -14,6 +14,11 @@ const Header = ({
   widthSearch,
 }) => {
   const { show, setShow, nodeRef } = useClickOutSide();
+  const {
+    show: showSearch,
+    setShow: setShowSearch,
+    nodeRef: nodeRefSearch,
+  } = useClickOutSide();
   const { hovered, nodeRef: nodeRefHover } = useHover();
   const { hovered: hoverCategories, nodeRef: nodeRefCategories } = useHover();
   const [cart, setCart] = useState(false);
@@ -352,22 +357,55 @@ const Header = ({
           Teach on Udemy
         </NavLink>
       )}
+      {showSearch && (
+        <div className="fixed inset-0 bg-white">
+          <div className="flex items-center shadow-md">
+            <Search
+              width="w-full"
+              bgColor="bg-white"
+              borderNone
+              rounded=""
+            ></Search>
+            <div
+              className="flex items-center justify-center w-16 h-10 bg-white rounded-full"
+              onClick={() => setShowSearch(false)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="flex items-center gap-5">
         {btnMenu && (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className={`w-6 h-6`}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-            />
-          </svg>
+          <div onClick={() => setShowSearch(true)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className={`w-6 h-6`}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+          </div>
         )}
         <div
           // onMouseEnter={handleHover}
