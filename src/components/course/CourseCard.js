@@ -122,8 +122,7 @@ const CourseCard = ({
           className={`${
             styleBanner
               ? `${adjustFontSize ? "text-[16px]" : "text-xl"} mt-auto ${
-                  !adjustMobileSmaller &&
-                  `${adjustPrice && "absolute bottom-0"}`
+                  !adjustMobileSmaller && `${adjustPrice && "bottom-0"}`
                 }`
               : ""
           } flex items-center text-[16px] gap-2 mb-2 ${adjustPrice}`}

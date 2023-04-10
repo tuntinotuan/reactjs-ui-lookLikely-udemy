@@ -8,11 +8,11 @@ const dataLocal = [
   "Create data visualizations using matplotlib and the seaborn modules with python.",
   "Have a portfolio of various data analysis projects.",
 ];
-const WhatYouLearn = () => {
+const WhatYouLearn = ({ whatYouLearnMobile = "grid grid-cols-2 gap-x-10" }) => {
   return (
     <section className="border border-slate-200 p-5">
       <h1 className="text-2xl font-bold mb-5">What you'll learn</h1>
-      <div className="grid grid-cols-2 gap-x-10">
+      <div className={`${whatYouLearnMobile}`}>
         {dataLocal.map((items) => (
           <div className="flex items-start gap-3 mb-2">
             <IconCheck></IconCheck>

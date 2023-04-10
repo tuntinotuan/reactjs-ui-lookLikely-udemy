@@ -13,6 +13,7 @@ const ListCourse = ({
   top = "top-[50px]",
   autoPlay = false,
   items = 5,
+  adjustPrice,
 
   mobileSmaller,
 }) => {
@@ -46,6 +47,7 @@ const ListCourse = ({
                 bestSeller={item.best_seller}
                 styleBanner={convertCard}
                 adjustMobileSmaller={mobileSmaller}
+                adjustPrice={adjustPrice}
                 // hotNew
               ></CourseCard>
             </SwiperSlide>

@@ -172,8 +172,7 @@ export const dataViewingStudents = [
   {
     img_course: "https://img-b.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
     title: "React - The Complete Guide (incl Hooks, React Router, Redux)",
-    instructor:
-      "Academind by Maximilian Schwarzmüller, Maximilian Schwarzmüller",
+    instructor: "Academind by Maximilian Schwarzmüller",
     rate: "4.6",
     reviewing: "(180,343)",
     current_price: "499,000",

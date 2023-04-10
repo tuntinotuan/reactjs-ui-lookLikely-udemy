@@ -4,7 +4,7 @@ import CourseCard from "../course/CourseCard";
 import Button from "../button/Button";
 import { useState } from "react";
 
-const StudentsAlsoBought = () => {
+const StudentsAlsoBought = ({ heart = true }) => {
   const [showMore, setShowMore] = useState(false);
   function handleShowMore() {
     setShowMore(!showMore);
@@ -27,13 +27,17 @@ const StudentsAlsoBought = () => {
                 styleBanner
                 borderBottom
                 adjustParent="relative py-3 gap-3"
-                adjustImg="h-[62px] w-[62px]"
-                adjustPrice="flex-col right-16 top-0"
+                adjustImg="h-[60px] w-[60px]"
+                adjustPrice={`flex-col ${
+                  heart ? "absolute right-16 top-0" : ""
+                }`}
                 adjustFontSize="max-w-[260px]"
                 textReviewing="text-[16px]"
-                positionRate="absolute top-0 right-1/4 gap-6 mr-5"
+                positionRate={`${
+                  heart ? "absolute top-0 right-1/4 gap-6 mr-5" : ""
+                }`}
                 oneStart={1}
-                heart
+                heart={heart}
               ></CourseCard>
             ))}
       </div>
@@ -53,13 +57,17 @@ const StudentsAlsoBought = () => {
                   styleBanner
                   borderBottom
                   adjustParent="relative py-3 gap-3"
-                  adjustImg="h-[62px] w-[62px]"
-                  adjustPrice="flex-col right-16 top-0"
+                  adjustImg="h-[60px] w-[60px]"
+                  adjustPrice={`flex-col ${
+                    heart ? "absolute right-16 top-0" : ""
+                  }`}
                   adjustFontSize="max-w-[260px]"
                   textReviewing="text-[16px]"
-                  positionRate="absolute top-0 right-1/4 gap-6 mr-5"
+                  positionRate={`${
+                    heart ? "absolute top-0 right-1/4 gap-6 mr-5" : ""
+                  }`}
                   oneStart={1}
-                  heart
+                  heart={heart}
                 ></CourseCard>
               ))}
         </div>

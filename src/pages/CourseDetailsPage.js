@@ -18,6 +18,7 @@ import UserComment from "../components/others/UserComment";
 import Button from "../components/button/Button";
 import CourseCard from "../components/course/CourseCard";
 import { dataViewingStudents } from "../data/dataConfig";
+import useViewport from "../hooks/useViewport";
 
 const CourseDetailsPage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -35,7 +36,93 @@ const CourseDetailsPage = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  // console.log(offset);
+
+  const { width } = useViewport();
+  const isMobileSmaller = width <= 414;
+  const isMobile = width >= 415 && width <= 768;
+  const isTable = width > 768 && width <= 1024;
+
+  if (isMobileSmaller) {
+    return (
+      <Fragment>
+        <MainInforDetails
+          width="w-[400px]"
+          center
+          showVideo
+          textCol="flex flex-col gap-2"
+          showBottomBlock
+          padding="px-4"
+          unFlex
+        ></MainInforDetails>
+        <CourseAttention
+          scroll={offset}
+          bgwhite
+          locatedBottom
+          showPrice
+          padding="px-5"
+          hiddenInfoLeft
+          center
+          btnMobileSmaller="w-[270px] bg-btnadd text-white"
+        ></CourseAttention>
+        <BodyBelow
+          scroll={offset}
+          leftWidth="w-[369px]"
+          leftBlockCenter
+          hiddenRightBlock
+          overHidden
+          whatYouLearnMobile="flex flex-col"
+          companiesOfferMobile="grid grid-cols-3"
+          courseContentMobile="flex flex-col gap-2 mb-2"
+          frequentlyBoughtTogetherMobile="w-[60px] h-[60px]"
+          studentsAlsoBoughtMobile={false}
+          courseRatingMobile="grid grid-cols-1 gap-5"
+          gridMoreCourses="grid grid-cols-2 gap-5"
+          padding="px-5"
+        ></BodyBelow>
+        <ChooseCompanies col gridLogo="grid grid-cols-3"></ChooseCompanies>
+      </Fragment>
+    );
+  }
+  if (isMobile) {
+    return (
+      <Fragment>
+        <MainInforDetails
+          center
+          showVideo
+          textCol="flex flex-col gap-2"
+          showBottomBlock
+        ></MainInforDetails>
+        <CourseAttention
+          scroll={offset}
+          locatedBottom
+          showPrice
+          padding="px-5"
+        ></CourseAttention>
+        <BodyBelow scroll={offset} leftBlockCenter hiddenRightBlock></BodyBelow>
+        <ChooseCompanies col></ChooseCompanies>
+      </Fragment>
+    );
+  }
+  if (isTable) {
+    return (
+      <Fragment>
+        <MainInforDetails
+          center
+          showVideo
+          textCol="flex flex-col gap-2"
+          showBottomBlock
+        ></MainInforDetails>
+        <CourseAttention
+          scroll={offset}
+          locatedBottom
+          showPrice
+          padding="px-5"
+        ></CourseAttention>
+        <BodyBelow scroll={offset} leftBlockCenter hiddenRightBlock></BodyBelow>
+        <ChooseCompanies col></ChooseCompanies>
+      </Fragment>
+    );
+  }
   return (
     <Fragment>
       <MainInforDetails></MainInforDetails>
@@ -45,33 +132,73 @@ const CourseDetailsPage = () => {
     </Fragment>
   );
 };
-function BodyBelow({ scroll }) {
+function BodyBelow({
+  scroll,
+  leftWidth = "w-[690px]",
+  leftBlockCenter = false,
+  hiddenRightBlock = false,
+  overHidden = false,
+  padding = "",
+  whatYouLearnMobile,
+  companiesOfferMobile,
+  courseContentMobile,
+  studentsAlsoBoughtMobile,
+  frequentlyBoughtTogetherMobile,
+  courseRatingMobile,
+  gridMoreCourses,
+}) {
   return (
-    <section className="py-8 h-auto">
+    <section
+      className={`py-8 h-auto ${padding} ${
+        overHidden ? "overflow-hidden" : ""
+      }`}
+    >
       <div className="page-container-fluid relative h-full flex items-start gap-10">
-        <div className="h-full w-[690px]">
-          <Left></Left>
+        <div
+          className={`h-full ${leftWidth} ${leftBlockCenter ? "mx-auto" : ""}`}
+        >
+          <Left
+            grid={gridMoreCourses}
+            whatYouLearnMobile={whatYouLearnMobile}
+            companiesOfferMobile={companiesOfferMobile}
+            courseContentMobile={courseContentMobile}
+            studentsAlsoBoughtMobile={studentsAlsoBoughtMobile}
+            frequentlyBoughtTogetherMobile={frequentlyBoughtTogetherMobile}
+            courseRatingMobile={courseRatingMobile}
+          ></Left>
         </div>
-        <div className="flex flex-col justify-end h-full w-[350px] px-2">
-          <Right scroll={scroll}></Right>
-        </div>
+        {!hiddenRightBlock && (
+          <div className="flex flex-col justify-end h-full w-[350px] px-2">
+            <Right scroll={scroll}></Right>
+          </div>
+        )}
       </div>
     </section>
   );
 }
-function Left() {
+function Left({
+  grid,
+  whatYouLearnMobile,
+  companiesOfferMobile,
+  courseContentMobile,
+  studentsAlsoBoughtMobile,
+  frequentlyBoughtTogetherMobile,
+  courseRatingMobile,
+}) {
   return (
     <Fragment>
-      <WhatYouLearn></WhatYouLearn>
-      <CompaniesOffer></CompaniesOffer>
-      <CourseContent></CourseContent>
+      <WhatYouLearn whatYouLearnMobile={whatYouLearnMobile}></WhatYouLearn>
+      <CompaniesOffer gridLogo={companiesOfferMobile}></CompaniesOffer>
+      <CourseContent topFlex={courseContentMobile}></CourseContent>
       <TitleWithDots></TitleWithDots>
       <CourseDescription></CourseDescription>
-      <StudentsAlsoBought></StudentsAlsoBought>
-      <FrequentlyBoughtTogether></FrequentlyBoughtTogether>
+      <StudentsAlsoBought heart={studentsAlsoBoughtMobile}></StudentsAlsoBought>
+      <FrequentlyBoughtTogether
+        imgMobile={frequentlyBoughtTogetherMobile}
+      ></FrequentlyBoughtTogether>
       <CourseDetailsInstructor></CourseDetailsInstructor>
-      <CourseRating></CourseRating>
-      <MoreCourses></MoreCourses>
+      <CourseRating grid={courseRatingMobile}></CourseRating>
+      <MoreCourses grid={grid}></MoreCourses>
     </Fragment>
   );
 }
@@ -82,7 +209,7 @@ function Right({ scroll }) {
     </Fragment>
   );
 }
-function CourseRating() {
+function CourseRating({ grid = "grid grid-cols-2 gap-6" }) {
   return (
     <section className="my-5">
       <div className="flex items-center gap-1 text-2xl font-bold mb-5">
@@ -95,7 +222,7 @@ function CourseRating() {
         <div className="w-2 h-2 bg-slate-600 rounded-full mx-1"></div>
         <h1>19K ratings</h1>
       </div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className={grid}>
         {dataLocal.map((items) => (
           <UserComment
             name={items.name}
@@ -109,7 +236,7 @@ function CourseRating() {
     </section>
   );
 }
-function MoreCourses() {
+function MoreCourses({ grid = "grid grid-cols-3 gap-4" }) {
   return (
     <section>
       <div className="flex items-center gap-1">
@@ -118,7 +245,9 @@ function MoreCourses() {
           Jose Portilla
         </h1>
       </div>
-      <div className="grid grid-cols-3 gap-4 py-5 border border-transparent border-b-slate-200 mb-4">
+      <div
+        className={`${grid} py-5 border border-transparent border-b-slate-200 mb-4`}
+      >
         {dataViewingStudents.slice(6, 9).map((items) => (
           <CourseCard
             img={items.img_course}

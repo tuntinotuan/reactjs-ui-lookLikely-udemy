@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const CourseContent = () => {
+const CourseContent = ({ topFlex = "flex items-center justify-between" }) => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
     setToggle(!toggle);
@@ -9,7 +9,7 @@ const CourseContent = () => {
   return (
     <section>
       <h1 className="text-2xl font-bold mb-5">Course content</h1>
-      <div className="flex items-center justify-between mb-2">
+      <div className={`${topFlex} last:mb-2`}>
         <span className="text-xs opacity-90">
           15 sections • 110 lectures • 21h 5m total length
         </span>

@@ -9,7 +9,7 @@ import CompaniesTrustedUdemy from "./CompaniesTrustedUdemy";
 const AllCourses = ({
   table,
   imgMobile,
-  priceMobile = "flex-col right-0 top-0 bottom-none",
+  priceMobile = "flex-col absolute right-0 top-0 bottom-none",
   titleTable,
   hiddenResults = false,
   mobileSmaller,

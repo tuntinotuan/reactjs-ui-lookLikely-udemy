@@ -15,6 +15,7 @@ const FeaturedCourses = ({
         top="top-1/3"
         convertCard
         autoPlay
+        adjustPrice="absolute"
         mobileSmaller={mobileSmaller}
       ></ListCourse>
     </section>
